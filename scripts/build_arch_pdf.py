@@ -627,7 +627,7 @@ def page_infra_scenarios(p: Page):
             p.text(300, y + 9 + j * 11, ln, 8.4, False, INK)
         y += h
     p.text(28, y + 20, "What stays the same in every case: skills, data contracts, the approval gate, the audit trail, and the scenario tests "
-                       "- so any swap is verified by the same 77 scenarios.", 8.5, True, PURPLE_S)
+                       "- so any swap is verified by the same 80 scenarios.", 8.5, True, PURPLE_S)
 
 
 # ============================================================================ workflow flowcharts

@@ -14,7 +14,7 @@
 | Item | Status |
 |---|---|
 | Required cases FIN-001..FIN-005 | passing |
-| Edge-case, combined, judgement and noisy-input scenarios FIN-006..FIN-077 | 77/77 scenarios, 1,364/1,364 checks passing (`finagent eval`) |
+| Edge-case, combined, judgement and noisy-input scenarios FIN-006..FIN-080 | 80/80 scenarios, 1,411/1,411 checks passing (`finagent eval`) |
 | Skills | every skill runs its deterministic script; 4 judgement skills ask fixed questions (small model answers, large model second opinion on concerns, code decides, caution only) ([skills.md](../skills.md)) |
 | Stable test suite | all passing (`make test`): unit, tool/orchestration contracts, API, skill fixtures, scenarios, policy freshness, policy baseline |
 | Policy changes | system maintenance releases (tests + reviewed baseline + restart), never live; unreviewed corpus changes hold every case. Baseline **not yet reviewed by a finance owner** ([governance.md](../governance.md)) |

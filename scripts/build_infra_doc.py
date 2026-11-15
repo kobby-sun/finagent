@@ -33,6 +33,6 @@ md += ["", "## When circumstances change", "", "| If this changes ... | ... chan
 for when, what in SCENARIOS:
     md.append(f"| {when} | {what} |")
 md += ["", "**What stays the same in every case:** skills, data contracts, the approval gate, the audit trail and the scenario tests. "
-       "Any swap is verified by the same 77 scenarios (`finagent eval`)."]
+       "Any swap is verified by the same 80 scenarios (`finagent eval`)."]
 (ROOT / "docs" / "infrastructure.md").write_text("\n".join(md) + "\n")
 print("wrote docs/infrastructure.md")

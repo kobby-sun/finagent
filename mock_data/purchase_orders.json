@@ -2699,5 +2699,177 @@
       }
     ],
     "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40078",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "GLV-500",
+        "description": "Nitrile gloves (box)",
+        "category": "goods",
+        "quantity": "40.00",
+        "unit_price": "22.00",
+        "line_value": "880.00"
+      }
+    ],
+    "subtotal": "880.00",
+    "tax": "88.00",
+    "total": "968.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40078-1",
+        "line_no": 1,
+        "quantity_received": "40.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40079",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "EAR-100",
+        "description": "Ear plugs (box of 100)",
+        "category": "goods",
+        "quantity": "30.00",
+        "unit_price": "35.00",
+        "line_value": "1050.00"
+      }
+    ],
+    "subtotal": "1050.00",
+    "tax": "105.00",
+    "total": "1155.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40079-1",
+        "line_no": 1,
+        "quantity_received": "30.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40080",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PAP-A4",
+        "description": "A4 copy paper (ream)",
+        "category": "goods",
+        "quantity": "200.00",
+        "unit_price": "6.50",
+        "line_value": "1300.00"
+      }
+    ],
+    "subtotal": "1300.00",
+    "tax": "130.00",
+    "total": "1430.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40080-1",
+        "line_no": 1,
+        "quantity_received": "200.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40081",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CONE-50",
+        "description": "Traffic cones",
+        "category": "goods",
+        "quantity": "50.00",
+        "unit_price": "18.00",
+        "line_value": "900.00"
+      }
+    ],
+    "subtotal": "900.00",
+    "tax": "90.00",
+    "total": "990.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40081-1",
+        "line_no": 1,
+        "quantity_received": "50.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
   }
 ]

@@ -3357,6 +3357,99 @@
       "input_format": "OCR-noisy text invoice (totals unreadable)",
       "notes_md": "",
       "request_file": "mock_data/cases/FIN-077/request.json"
+    },
+    {
+      "case_id": "FIN-078",
+      "title": "Request PO reference differs from the invoice document",
+      "kind": "edge",
+      "signals": "Request says PO-40078; the invoice says PO-40079 (both real POs of the same vendor).",
+      "expected": {
+        "status": "NEEDS_INFORMATION",
+        "outcome": "HOLD_FOR_INFORMATION",
+        "pool_status": "HELD"
+      },
+      "steps": [
+        {
+          "op": "start",
+          "expect_status": "NEEDS_INFORMATION",
+          "expect_outcome": "HOLD_FOR_INFORMATION",
+          "expect_findings": {
+            "consistency": "FAIL"
+          },
+          "expect_tools_not_called": [
+            "submit_finance_decision"
+          ]
+        }
+      ],
+      "policies": [
+        "FIN-POL-001 s5",
+        "FIN-POL-002 s1"
+      ],
+      "input_format": "e-invoice JSON",
+      "notes_md": "",
+      "request_file": "mock_data/cases/FIN-078/request.json"
+    },
+    {
+      "case_id": "FIN-079",
+      "title": "Request invoice number differs from the invoice document",
+      "kind": "edge",
+      "signals": "Request says EOS-7990; the invoice document is EOS-7900.",
+      "expected": {
+        "status": "NEEDS_INFORMATION",
+        "outcome": "HOLD_FOR_INFORMATION",
+        "pool_status": "HELD"
+      },
+      "steps": [
+        {
+          "op": "start",
+          "expect_status": "NEEDS_INFORMATION",
+          "expect_outcome": "HOLD_FOR_INFORMATION",
+          "expect_primary_exception": "OTHER_CONTROL_RISK",
+          "expect_findings": {
+            "consistency": "FAIL"
+          },
+          "expect_tools_not_called": [
+            "submit_finance_decision"
+          ]
+        }
+      ],
+      "policies": [
+        "FIN-POL-001 s5"
+      ],
+      "input_format": "e-invoice JSON",
+      "notes_md": "",
+      "request_file": "mock_data/cases/FIN-079/request.json"
+    },
+    {
+      "case_id": "FIN-080",
+      "title": "Request currency differs from the invoice document",
+      "kind": "edge",
+      "signals": "Request says USD; the invoice and PO are in AUD with the same amount.",
+      "expected": {
+        "status": "NEEDS_INFORMATION",
+        "outcome": "HOLD_FOR_INFORMATION",
+        "pool_status": "HELD"
+      },
+      "steps": [
+        {
+          "op": "start",
+          "expect_status": "NEEDS_INFORMATION",
+          "expect_outcome": "HOLD_FOR_INFORMATION",
+          "expect_primary_exception": "OTHER_CONTROL_RISK",
+          "expect_findings": {
+            "consistency": "FAIL"
+          },
+          "expect_tools_not_called": [
+            "submit_finance_decision"
+          ]
+        }
+      ],
+      "policies": [
+        "FIN-POL-001 s5"
+      ],
+      "input_format": "e-invoice JSON",
+      "notes_md": "",
+      "request_file": "mock_data/cases/FIN-080/request.json"
     }
   ]
 }

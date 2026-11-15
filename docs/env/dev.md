@@ -25,7 +25,7 @@ finagent workflow validate    # OK: accounts-payable-invoice-review v2026.11.1 d
 Service control and test-data commands (`make start|stop|status|logs|up|down|seed|load|load-approve|reset`) are summarised at the top of the [README](../../README.md#local-dev-control-the-service-and-load-test-data).
 
 ```bash
-make test                     # 202 stable tests: unit, contract, API, 95 skill fixtures, 42 scenarios
+make test                     # 352 stable tests: unit, contract, API, 98 skill fixtures, all 80 scenarios
 make eval                     # scenario evaluation report (pass/fail per case + RAG metrics)
 make demo                     # FIN-001 approval flow + FIN-003 exception flow transcript
 make serve                    # API on http://127.0.0.1:8080 - Swagger UI at /docs, ReDoc at /redoc
@@ -41,7 +41,7 @@ built into the image.
 make up                        # Windows: .\dev.ps1 up    any OS: python scripts/dev/docker_up.py
 MODELS=docker make up          # auto (default) | host (Ollama on this machine) | docker (Ollama container) | mock (no models)
 make docker-test               # every test inside the container      (Windows: .\dev.ps1 docker-test)
-make docker-eval               # all 77 scenarios inside the container
+make docker-eval               # all 80 scenarios inside the container
 make docker-load CASES="FIN-001"   # submit cases to the container
 make down                      # stop;  make down-clean also removes data and pulled models
 ```

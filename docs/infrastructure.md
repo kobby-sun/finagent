@@ -92,4 +92,4 @@ flowchart LR
 | Policies change often / many policy owners | 29 -> consider OPA/DMN so policy owners maintain rules outside the code |
 | Long-running cross-team processes | 3 -> AWS Step Functions or Temporal, keeping skills (4) and contracts (5) unchanged |
 
-**What stays the same in every case:** skills, data contracts, the approval gate, the audit trail and the scenario tests. Any swap is verified by the same 77 scenarios (`finagent eval`).
+**What stays the same in every case:** skills, data contracts, the approval gate, the audit trail and the scenario tests. Any swap is verified by the same 80 scenarios (`finagent eval`).

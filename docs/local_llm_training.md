@@ -79,7 +79,7 @@ scripts/training/eval_local_model.sh finagent-ap
 
 This runs:
 
-- every scenario (77) with the narrative step on `provider=ollama`;
+- every scenario (80) with the narrative step on `provider=ollama`;
 - the `llm`-marked safety tests.
 
 Adopt the model only if **all** of the following hold:

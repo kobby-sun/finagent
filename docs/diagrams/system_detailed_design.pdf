@@ -13855,7 +13855,7 @@ BT /F2 8.6 Tf 30.0 281.0 Td (Long-running cross-team processes) Tj ET
 0.130 0.160 0.220 rg
 BT /F1 8.4 Tf 300.0 281.0 Td (3 -> AWS Step Functions or Temporal, keeping skills \(4\) and contracts \(5\) unchanged) Tj ET
 0.500 0.380 0.780 rg
-BT /F2 8.5 Tf 28.0 247.0 Td (What stays the same in every case: skills, data contracts, the approval gate, the audit trail, and the scenario tests - so any swap is verified by the same 77 scenarios.) Tj ET
+BT /F2 8.5 Tf 28.0 247.0 Td (What stays the same in every case: skills, data contracts, the approval gate, the audit trail, and the scenario tests - so any swap is verified by the same 80 scenarios.) Tj ET
 endstream
 endobj
 54 0 obj

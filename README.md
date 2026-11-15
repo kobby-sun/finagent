@@ -45,7 +45,7 @@ Then:
 | Open the API | http://127.0.0.1:8080/docs (Swagger, ready-made examples) | same |
 | Submit the scenario cases | `make docker-load` (`CASES="FIN-001 FIN-003"`, `APPROVE=1` to replay approvals) | `.\dev.ps1 docker-load FIN-001` |
 | Every test inside the container | `make docker-test` | `.\dev.ps1 docker-test` |
-| All 77 scenarios inside the container | `make docker-eval` | `.\dev.ps1 docker-eval` |
+| All 80 scenarios inside the container | `make docker-eval` | `.\dev.ps1 docker-eval` |
 | Stop / remove data and pulled models | `make down` / `make down-clean` | `.\dev.ps1 down` / `down-clean` |
 
 Without Docker, `make bootstrap` (Windows `.\dev.ps1 bootstrap`) sets up a local Python environment instead; see below.
@@ -55,10 +55,10 @@ Without Docker, `make bootstrap` (Windows `.\dev.ps1 bootstrap`) sets up a local
 | | |
 |---|---|
 | Required cases FIN-001..005 | ✅ all pass |
-| Scenarios (37 edge + 21 combined + 9 judgement + 5 noisy-input cases) | **77/77**, 1,364/1,364 checks (`finagent eval`): outcome, exit step, tools, warnings, audit events, reasoning |
-| Stable tests | **346 passing** (`make test`): unit, contract, API, 95 skill fixtures, skill packs + runner, all scenarios, search-accuracy gate, policy freshness and start-up checks |
+| Scenarios (40 edge + 21 combined + 9 judgement + 5 noisy-input cases) | **80/80**, 1,411/1,411 checks (`finagent eval`): outcome, exit step, tools, warnings, audit events, reasoning |
+| Stable tests | **352 passing** (`make test`): unit, contract, API, 98 skill fixtures, skill packs + runner, all scenarios, search-accuracy gate, policy freshness and start-up checks |
 | RAG | **semantic search on** (hybrid BM25 + fine-tuned embedder): curated recall 43/43, held-out R@5 0.90 vs 0.71 BM25, never below BM25 on any measure (accuracy gate); 0 untrusted citations; index and search model checked against the corpus at start-up |
-| Real models | stock `qwen2.5:7b` + `qwen2.5:14b` (Ollama): gate **22/22**, **22/22 with maximum noise**, **70/70** scenarios; approved pair. Code only: 68/77 (the 9 judgement cases need the model) |
+| Real models | stock `qwen2.5:7b` + `qwen2.5:14b` (Ollama): gate **22/22**, **22/22 with maximum noise**, **70/70** scenarios; approved pair. Code only: 71/80 (the 9 judgement cases need the model) |
 | Skills | **code asks, the model answers, code decides**: every skill runs its deterministic script; 4 judgement skills ask fixed questions answered by a small local model; a larger model gives a second vote unless the small one is ≥ 99% sure all is clear (caution only); judgement scenarios FIN-064..072 catch cases the scripts alone would approve ([docs/skills.md](docs/skills.md)) |
 | Policy changes | **maintenance releases, never live**: start-up rebuilds the index, retrains the search model if needed, and holds every case if the policy text differs from the verified baseline (`make policy`) |
 | Container | `docker build .` → `/healthz`, `POST /runs` verified |

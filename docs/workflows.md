@@ -281,7 +281,7 @@ flowchart LR
 
 **Business meaning.** Something on the invoice does not agree with the order or delivery. Payment is held and the exact problem (expected value, actual value, policy rule) is sent to the person who can fix it.
 
-**When it happens.** Price above tolerance; more billed than received; unreceipted line; unapproved freight; wrong tax; currency mismatch; request amount differs from the document.
+**When it happens.** Price above tolerance; more billed than received; unreceipted line; unapproved freight; wrong tax; currency mismatch; request amount, PO, invoice number or currency differs from the document.
 
 ```mermaid
 flowchart LR
@@ -307,7 +307,7 @@ flowchart LR
 - Run NEEDS_INFORMATION, pool HELD
 - Webhook run.needs_information; no approval request; nothing can be posted
 
-**Example test cases.** FIN-006, FIN-008, FIN-014, FIN-023, FIN-032, FIN-048, FIN-052
+**Example test cases.** FIN-006, FIN-008, FIN-014, FIN-023, FIN-032, FIN-048, FIN-052, FIN-078, FIN-079, FIN-080
 
 **Evidence in the logs.** three_way_match / evidence_completeness vote HOLD; failing calculation recorded
 

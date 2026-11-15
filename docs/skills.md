@@ -158,7 +158,7 @@ Ollama is down, questions can't be answered and cases are **held** (start-up pri
 ```bash
 ollama serve & ollama pull qwen2.5:7b-instruct && ollama pull qwen2.5:14b-instruct    # once
 make start                                                     # service uses the pair
-FINAGENT__SKILLS__LLM__USE_MOCK=true make start                # fast demo mode (e.g. make load of all 77 cases)
+FINAGENT__SKILLS__LLM__USE_MOCK=true make start                # fast demo mode (e.g. make load of all 80 cases)
 make skill-check SMALL=ollama/qwen2.5:3b-instruct LARGE=ollama/qwen2.5:14b-instruct   # gate another pair
 ```
 
@@ -169,7 +169,7 @@ make skill-check SMALL=ollama/qwen2.5:3b-instruct LARGE=ollama/qwen2.5:14b-instr
 | 22-case gate | **PASS 22/22**, 0 unanswered, 7 uncertain answers, 5 disagreements | 16 times | 17 s |
 | same 22 with **maximum noise** (`--noise max`) | **PASS 22/22** | 21 times | 25 s |
 | all scenarios (`--all`) | **70/70** applicable (FIN-022/059 simulate crashes; FIN-067 scripts invalid output) | 25 times | 9 s |
-| code only (`skills.llm.enabled: false`) | 68/77: the 9 judgement cases fail - the measured value of the model layer | - | - |
+| code only (`skills.llm.enabled: false`) | 71/80: the 9 judgement cases fail - the measured value of the model layer | - | - |
 
 The earlier free-form procedure design (the model chose scripts and wrote findings) failed with `qwen2.5:14b` alone
 (11/17, ~140 s per case). That is why the model's job was narrowed to answering scoped questions.

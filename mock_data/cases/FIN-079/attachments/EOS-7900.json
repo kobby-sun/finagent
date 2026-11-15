@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "EOS-7900",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Evergreen Office Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40080",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "PAP-A4",
+      "description": "A4 copy paper (ream)",
+      "category": "goods",
+      "quantity": "200.00",
+      "unit_price": "6.50",
+      "amount": "1300.00"
+    }
+  ],
+  "subtotal": "1300.00",
+  "tax": "130.00",
+  "total": "1430.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "3090",
+    "bank_country": "AU"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "INV-AC-7880",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Acme Industrial Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40081",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "CONE-50",
+      "description": "Traffic cones",
+      "category": "goods",
+      "quantity": "50.00",
+      "unit_price": "18.00",
+      "amount": "900.00"
+    }
+  ],
+  "subtotal": "900.00",
+  "tax": "90.00",
+  "total": "990.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "4410",
+    "bank_country": "AU"
+  }
+}

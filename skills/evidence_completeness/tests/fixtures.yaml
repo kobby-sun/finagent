@@ -24,6 +24,36 @@ fixtures:
       consistency: FAIL
     calculations:
       request_vs_document_amount: false
+- id: ec-header-po-mismatch
+  description: Request PO-40078 vs invoice PO-40079
+  case: FIN-078
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      consistency: FAIL
+- id: ec-header-invoice-ref-mismatch
+  description: Request EOS-7990 vs invoice EOS-7900
+  case: FIN-079
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      consistency: FAIL
+- id: ec-header-currency-mismatch
+  description: Request USD vs invoice AUD
+  case: FIN-080
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      consistency: FAIL
 - id: ec-no-document
   description: Header-only request; no invoice attached
   case: FIN-041

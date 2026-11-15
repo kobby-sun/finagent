@@ -1308,6 +1308,35 @@ def build_judgement_cases():
          [start(NI, HOLD, expect_tools_not_called=["submit_finance_decision"])], ["FIN-POL-001 s2", "FIN-POL-001 s5"],
          "OCR-noisy text invoice (totals unreadable)")
 
+    # ---------------------------------------------------------------- request header vs attached document (like FIN-023)
+    E, NI_, HOLD_ = "edge", "NEEDS_INFORMATION", "HOLD_FOR_INFORMATION"
+    held = dict(expect_findings={"consistency": "FAIL"}, expect_tools_not_called=["submit_finance_decision"])
+    # 78 request names a different (real) PO than the invoice: the request's PO is fetched, so the case must hold
+    p_req = po("PO-40078", "V-1001", [("GLV-500", "Nitrile gloves (box)", "goods", 40, "22.00")])
+    p_doc = po("PO-40079", "V-1001", [("EAR-100", "Ear plugs (box of 100)", "goods", 30, "35.00")])
+    d = invoice_doc("INV-AC-7878", "V-1001", "2026-11-09", inv_lines(p_doc), po_ref="PO-40079")
+    case("FIN-078", "Request PO reference differs from the invoice document", E,
+         "Request says PO-40078; the invoice says PO-40079 (both real POs of the same vendor).",
+         {"invoice_ref": "INV-AC-7878", "vendor_id": "V-1001", "amount": d["total"], "currency": "AUD", "po_ref": "PO-40078"},
+         [att(as_json(d))], {"status": NI_, "outcome": HOLD_, "pool_status": "HELD"},
+         [start(NI_, HOLD_, **held)], ["FIN-POL-001 s5", "FIN-POL-002 s1"], "e-invoice JSON")
+    # 79 request invoice number differs from the document's
+    p = po("PO-40080", "V-1005", [("PAP-A4", "A4 copy paper (ream)", "goods", 200, "6.50")])
+    d = invoice_doc("EOS-7900", "V-1005", "2026-11-09", inv_lines(p), po_ref="PO-40080")
+    case("FIN-079", "Request invoice number differs from the invoice document", E,
+         "Request says EOS-7990; the invoice document is EOS-7900.",
+         {"invoice_ref": "EOS-7990", "vendor_id": "V-1005", "amount": d["total"], "currency": "AUD", "po_ref": "PO-40080"},
+         [att(as_json(d))], {"status": NI_, "outcome": HOLD_, "pool_status": "HELD"},
+         [start(NI_, HOLD_, "OTHER_CONTROL_RISK", **held)], ["FIN-POL-001 s5"], "e-invoice JSON")
+    # 80 request currency differs from the document's (same figures)
+    p = po("PO-40081", "V-1001", [("CONE-50", "Traffic cones", "goods", 50, "18.00")])
+    d = invoice_doc("INV-AC-7880", "V-1001", "2026-11-09", inv_lines(p), po_ref="PO-40081")
+    case("FIN-080", "Request currency differs from the invoice document", E,
+         "Request says USD; the invoice and PO are in AUD with the same amount.",
+         {"invoice_ref": "INV-AC-7880", "vendor_id": "V-1001", "amount": d["total"], "currency": "USD", "po_ref": "PO-40081"},
+         [att(as_json(d))], {"status": NI_, "outcome": HOLD_, "pool_status": "HELD"},
+         [start(NI_, HOLD_, "OTHER_CONTROL_RISK", **held)], ["FIN-POL-001 s5"], "e-invoice JSON")
+
 
 def main():
     build_cases()
