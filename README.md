@@ -17,6 +17,12 @@ Every step is checkpointed and recorded in a hash-chained, redacted audit trail.
 Needs only **Docker** (Docker Desktop on macOS / Windows, Docker Engine + compose on Linux) and Python 3 to run the
 launcher (standard library only, no setup). Everything else is in the repository, including the trained search model.
 
+```bash
+git clone https://github.com/kobby-sun/finagent.git
+cd finagent
+make up                  # or: make up MODELS=mock   (no LLM download, starts in seconds)
+```
+
 | macOS / Linux | Windows (PowerShell) | Any OS |
 |---|---|---|
 | `make up` | `.\dev.ps1 up` | `python scripts/dev/docker_up.py` |
