@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "CP-5601",
+  "invoice_date": "2026-11-07",
+  "vendor_name": "Coastal Packaging Co Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40044",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "BOX-700",
+      "description": "Archive boxes",
+      "category": "goods",
+      "quantity": "500.00",
+      "unit_price": "7.50",
+      "amount": "3750.00"
+    }
+  ],
+  "subtotal": "3750.00",
+  "tax": "375.00",
+  "total": "4125.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "8842",
+    "bank_country": "AU"
+  }
+}

@@ -1,0 +1,41 @@
+# Fixtures for skill 'payment_scheduling'. Run: finagent skills test payment_scheduling
+skill: payment_scheduling
+fixtures:
+- id: ps-standard
+  case: FIN-001
+  description: 2026-11-04 + 30d = Fri 12-04 => Thu 12-03 run
+  expect:
+    votes: []
+    data:
+      proposed_payment_date: '2026-12-03'
+- id: ps-weekend-due
+  case: FIN-001
+  description: Due Sun 12-06 => Fri 12-04 => Thu 12-03 run
+  patch:
+    invoice.invoice_date: '2026-11-06'
+  expect:
+    data:
+      proposed_payment_date: '2026-12-03'
+- id: ps-contract-terms
+  case: FIN-001
+  description: PO terms 14d override invoice's 30d => Tue 11-17
+  patch:
+    evidence.po.payment_terms_days: 14
+  expect:
+    data:
+      proposed_payment_date: '2026-11-17'
+- id: ps-overdue
+  case: FIN-001
+  description: Already overdue => next run after today
+  patch:
+    invoice.invoice_date: '2026-09-01'
+  expect:
+    data:
+      proposed_payment_date: '2026-11-17'
+- id: ps-credit-note
+  case: FIN-019
+  description: Credit notes are not scheduled
+  expect:
+    votes: []
+    data:
+      proposed_payment_date: null

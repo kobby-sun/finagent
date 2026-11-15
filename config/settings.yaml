@@ -1,0 +1,130 @@
+# finagent configuration. Every value can be overridden with an environment
+# variable: FINAGENT__<SECTION>__<KEY> (double underscore), e.g.
+#   FINAGENT__LLM__PROVIDER=ollama
+# Provider / model configuration lives here, never in orchestration code.
+
+app:
+  env: dev
+  data_dir: ./data                 # SQLite DB, index, audit JSONL
+  db_file: finagent.db
+  audit_jsonl: audit.jsonl
+  fixed_now: "2026-11-12T10:00:00+11:00"  # mock data is anchored to this clock; set null for wall-clock time
+  api_key: null                    # if set, HTTP API requires X-API-Key header
+  run_diagrams: []                 # e.g. [svg] or [pdf, png]: auto-draw a diagram of every run into data/diagrams/
+
+llm:
+  provider: mock                   # mock | ollama | anthropic | bedrock
+  model: finagent-rules-echo-v1    # provider-specific model id
+  temperature: 0.0
+  max_output_tokens: 2000
+  request_timeout_s: 60
+  max_validation_retries: 2        # re-prompts after malformed output
+  on_invalid_output: fallback      # fallback (deterministic narrative, flagged) | fail
+  allow_model_escalation: true     # model may make the outcome MORE conservative, never less
+  providers:
+    ollama:
+      base_url: http://localhost:11434
+      model: qwen2.5:14b-instruct  # local narrative model (~9 GB); skill questions use skills.llm.small / large
+      num_ctx: 16384               # context window; Ollama's small default would silently truncate skill prompts
+    anthropic:
+      model: claude-opus-5-5
+      effort: low
+    bedrock:
+      region: ap-southeast-2
+      model: anthropic.claude-opus-5-5
+
+rag:
+  corpus_dir: ./finance_rag_corpus
+  auto_reindex: true               # rebuild the index at start-up when corpus files changed (local sources); no live reload
+  retrain_on_startup: true         # start-up: search model trained on an older corpus -> gated retrain; not possible -> BM25
+  sources:                         # corpus connectors (finagent/rag/ingest.py CONNECTORS); add feeds here
+    - name: finance-policy-corpus
+      type: local_dir
+      path: ./finance_rag_corpus
+    # - name: policy-portal          # example: JSON feed of CorpusDocument records
+    #   type: http_feed
+    #   url: https://policies.example.internal/api/corpus
+    #   headers: {Authorization: "env:POLICY_FEED_TOKEN"}
+    #   enabled: false
+    # - name: supplier-portal-notices
+    #   type: http_feed
+    #   url: https://suppliers.example/api/notices
+    #   trust_ceiling: untrusted     # a source can lower trust, never raise it
+  index_file: index/bm25_index.json
+  top_k: 5
+  bm25_k1: 1.4
+  bm25_b: 0.7
+  superseded_penalty: 0.35         # multiplier applied to superseded documents
+  untrusted_penalty: 0.6           # multiplier applied to untrusted / unverified documents
+  # Semantic search ON: hybrid BM25 + fine-tuned bge-small (models/embedder). Chosen because it passes the
+  # accuracy gate (scripts/training/accuracy_gate.py): curated recall 43/43 (= BM25), held-out R@1 0.62 vs 0.47,
+  # R@5 0.90 vs 0.71, MRR 0.74 vs 0.56, 0 untrusted docs ranked first. If the model or library is missing the service
+  # falls back to BM25 automatically (shown in /healthz). The offline `hash` embedder must NOT be used with hybrid
+  # (it lowers recall: R@5 0.64).
+  mode: hybrid                     # lexical | hybrid (BM25 + vectors, RRF fusion) | vector
+  fusion: {lexical_weight: 1.0, vector_weight: 4.0}
+  vector:
+    store: sqlite                  # sqlite (local POC) | <registered adapter: pgvector, opensearch, qdrant ...>
+    sqlite_file: index/vectors.db
+    embedder: sentence_transformers  # fine-tuned model | hash (offline, tests only) | ollama (pretrained semantic)
+    model_path: models/embedder   # used by sentence_transformers
+    embedding_model: nomic-embed-text
+    dim: 384
+  caller_role: ap_agent
+  access:                          # FIN-POL-010 s3: retrieval enforces source permissions
+    ap_agent: [internal, restricted, external-unverified]
+    ap_clerk_readonly: [internal]
+
+skills:
+  llm:                             # skills with questions: CODE ASKS, THE MODEL ANSWERS, CODE DECIDES (skills/llm_runner.py)
+    enabled: true                  # KILL SWITCH: false = no questions asked, the deterministic scripts decide alone
+    use_mock: false                # true = both models are the deterministic mock (tests/eval pin this; fast demos)
+    small:                         # answers every question: fast, local
+      provider: ollama
+      model: qwen2.5:7b-instruct   # ollama pull qwen2.5:7b-instruct
+    large:                         # second vote unless the small model is sure all is clear; decides on disagreement
+      provider: ollama             # swappable: ollama (e.g. qwen2.5:32b-instruct) | anthropic | bedrock | none (small only)
+      model: qwen2.5:14b-instruct
+    sure_threshold: 0.99           # the small model's all-clear stands alone only if every answer is at least this certain
+                                   # (token probability); otherwise the large model votes too and decides on disagreement
+    uncertain_below: 0.8           # a DECIDING answer below this certainty (or "unclear") follows the question's if_uncertain rule
+    qa_sample_rate: 0.05           # share of AI all-clears marked for the approver's quality check (catches "confidently wrong")
+    approved:                      # model PAIRS (small+large) that passed the acceptance gate (make skill-check); others run but are flagged
+      - ollama/qwen2.5:7b-instruct+ollama/qwen2.5:14b-instruct      # gate PASS 2026-11-14: 22/22 clean, 22/22 max noise, 70/70 scenarios
+      - mock/finagent-rules-echo-v1+mock/finagent-rules-echo-v1      # deterministic test pair
+    max_calls_per_run: 40          # model calls for skill questions per run
+    recordings_dir: mock_data/skill_recordings   # mock model: scripted answers for judgement scenarios
+  review:                          # POST /runs/{id}/review: a person decides a question the AI could not settle
+    roles: [Financial Controller, Financial Control Analyst]   # who may review (authority register role); never the approver
+
+policy:                            # policy changes are SYSTEM MAINTENANCE, never live (docs/governance.md)
+  baseline_file: config/policy_baseline.yaml       # section texts the controls were verified against; differs -> every case held
+  parameters_file: config/policy_parameters.yaml   # every policy number the controls enforce
+  baseline_roles: [Financial Controller, Chief Financial Officer]   # who may sign off a policy change (finagent policy baseline)
+
+agent:
+  max_steps: 40
+  max_tool_calls: 50               # ~22 retrieval queries + <=8 evidence tools per run
+  max_llm_calls: 6
+  max_extra_retrieval_rounds: 1
+  base_currency: AUD
+  gst_rate: "0.10"
+
+tools:
+  default_timeout_s: 2.0
+  max_attempts: 3
+  backoff_base_s: 0.05
+  overrides:
+    retrieve_finance_documents: {timeout_s: 5.0}
+    get_purchase_order: {timeout_s: 1.0}
+    submit_finance_decision: {timeout_s: 3.0, max_attempts: 3}
+
+mock:
+  data_dir: ./mock_data
+  timeout_sleep_s: 1.5             # how long a simulated "hanging" backend sleeps
+
+webhooks:
+  signing_secret: dev-only-change-me   # HMAC secret for outbound signatures and inbound approval callbacks
+  delivery_timeout_s: 2.0
+  max_delivery_attempts: 5
+  deliver_inline: true             # attempt delivery immediately after enqueue (dev); prod uses a worker

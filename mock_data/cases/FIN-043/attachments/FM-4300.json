@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "FM-4300",
+  "invoice_date": "2026-10-28",
+  "vendor_name": "Falcon Metals Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40043",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "STEEL2",
+      "description": "Steel brackets",
+      "category": "goods",
+      "quantity": "4.00",
+      "unit_price": "250.00",
+      "amount": "1000.00"
+    }
+  ],
+  "subtotal": "1000.00",
+  "tax": "100.00",
+  "total": "1100.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "6612",
+    "bank_country": "AU"
+  }
+}

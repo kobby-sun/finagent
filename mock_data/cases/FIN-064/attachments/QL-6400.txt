@@ -1,0 +1,19 @@
+TAX INVOICE
+Supplier: Quartz Labs Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: QL-6400
+Invoice Date: 2026-11-09
+PO Number: (none)
+Currency: AUD
+Non-PO Category: emergency
+Justification: Our maintenance agreement with the previous provider lapsed at the end of October, so Quartz Labs covered the call-outs at short notice.
+Emergency Type: outage
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | CALLOUT | Equipment call-outs (3 visits) | services | 3.00 | 950.00 | 2850.00
+
+Subtotal: 2850.00
+GST (10%): 285.00
+Total Due: AUD 3135.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 2626

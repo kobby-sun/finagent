@@ -1,0 +1,22 @@
+{
+  "case_id": "FIN-015",
+  "invoice_ref": "NPW-Q4-2026",
+  "vendor_id": "V-1014",
+  "amount": "3850.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "NPW-Q4-2026.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Northern Power and Water Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: NPW-Q4-2026\nInvoice Date: 2026-11-02\nPO Number: (none)\nCurrency: AUD\nNon-PO Category: utilities\nJustification: Quarterly electricity under approved utility account UA-4\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | ELEC-Q4 | Electricity Site 4 (Aug-Oct) | services | 1.00 | 3500.00 | 3500.00\n\nSubtotal: 3500.00\nGST (10%): 350.00\nTotal Due: AUD 3850.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 7300\n",
+      "source": "supplier"
+    },
+    {
+      "filename": "meter_reading_confirmation.txt",
+      "content_type": "text/plain",
+      "content": "Facilities confirmation: Site 4 meter readings for Aug-Oct 2026 verified against invoice NPW-Q4-2026. Cost centre CC-4410. Confirmed by facilities manager.",
+      "source": "internal"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

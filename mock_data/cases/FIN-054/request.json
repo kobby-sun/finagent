@@ -1,0 +1,29 @@
+{
+  "case_id": "FIN-054",
+  "invoice_ref": "INV-AC-9100",
+  "vendor_id": "V-1001",
+  "amount": "550.00",
+  "currency": "AUD",
+  "po_ref": "PO-40054",
+  "attachments": [
+    {
+      "filename": "broken.json",
+      "content_type": "application/json",
+      "content": "{\"invoice_number\": \"INV-AC-9100\", \"total\": ",
+      "source": "supplier"
+    },
+    {
+      "filename": "export.csv",
+      "content_type": "text/csv",
+      "content": "# currency=AUD\nline_no,sku,description,category,quantity,unit_price,amount\n",
+      "source": "supplier"
+    },
+    {
+      "filename": "memo.txt",
+      "content_type": "text/plain",
+      "content": "Hi team, invoice attached. Thanks.",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

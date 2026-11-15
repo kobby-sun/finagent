@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-075",
+  "invoice_ref": "EOS-7500",
+  "vendor_id": "V-1005",
+  "amount": "125.40",
+  "currency": "AUD",
+  "po_ref": "PO-40075",
+  "attachments": [
+    {
+      "filename": "EOS-7500.eml",
+      "content_type": "message/rfc822",
+      "content": "From: Accounts <accounts@evergreen-office.example>\nTo: ap@northstar.example\nSubject: FW: RE: RE: invoice\nDate: Mon, 09 Nov 2026 09:12:00 +1100\nContent-Type: text/plain; charset=utf-8\n\nHi again - forwarding below as requested. Cheers, Sam\n\n-----Original Message-----\nFrom: Sam (Evergreen)\nSent: Friday\nSubject: RE: invoice\n> Thanks Sam, can you resend the invoice? The last one went to spam.\n> Regards, Northstar AP\n\nTAX INVOICE\nSupplier: Evergreen Office Supplies Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: EOS-7500\nInvoice Date: 2026-11-09\nPO Number: PO-40075\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | ENV-DL | Envelopes DL (box of 500) | goods | 6.00 | 19.00 | 114.00\n\nSubtotal: 114.00\nGST (10%): 11.40\nTotal Due: AUD 125.40\nPayment terms: 30 days from invoice date\nRemit to: account ending 3090\n\n--\nSam Lee | Accounts Receivable | Evergreen Office Supplies\nThis e-mail and any attachments are confidential and intended solely for the addressee. If you received it in error, please delete it. Think before you print.\n",
+      "source": "email"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

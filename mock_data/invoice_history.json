@@ -1,0 +1,153 @@
+[
+  {
+    "record_id": "H-9001",
+    "case_id": "FIN-0901",
+    "vendor_id": "V-1002",
+    "invoice_ref": "BWL-2201",
+    "amount": "4620.00",
+    "currency": "AUD",
+    "invoice_date": "2026-10-02",
+    "po_ref": "PO-40002",
+    "status": "PAID",
+    "paid_ref": "PAY-778812"
+  },
+  {
+    "record_id": "H-9002",
+    "case_id": "FIN-0902",
+    "vendor_id": "V-1005",
+    "invoice_ref": "EOS00123",
+    "amount": "2200.00",
+    "currency": "AUD",
+    "invoice_date": "2026-11-01",
+    "po_ref": "PO-40009",
+    "status": "POSTED"
+  },
+  {
+    "record_id": "H-9003",
+    "case_id": "FIN-0903",
+    "vendor_id": "V-1001",
+    "invoice_ref": "INV-AC-7700",
+    "amount": "16500.00",
+    "currency": "AUD",
+    "invoice_date": "2026-09-15",
+    "po_ref": "PO-39990",
+    "status": "PAID"
+  },
+  {
+    "record_id": "H-9004",
+    "case_id": "FIN-0904",
+    "vendor_id": "V-1002",
+    "invoice_ref": "BWL-2250",
+    "amount": "5100.00",
+    "currency": "AUD",
+    "invoice_date": "2026-11-02",
+    "po_ref": "PO-40031",
+    "status": "REJECTED",
+    "rejection_reason": "Amount exceeded PO; supplier to reissue"
+  },
+  {
+    "record_id": "H-9005",
+    "case_id": "FIN-0905",
+    "vendor_id": "V-1019",
+    "invoice_ref": "SWC-0901",
+    "amount": "450.00",
+    "currency": "AUD",
+    "invoice_date": "2026-09-10",
+    "po_ref": null,
+    "status": "PAID",
+    "is_non_po": true
+  },
+  {
+    "record_id": "H-9006",
+    "case_id": "FIN-0906",
+    "vendor_id": "V-1019",
+    "invoice_ref": "SWC-1015",
+    "amount": "620.00",
+    "currency": "AUD",
+    "invoice_date": "2026-10-15",
+    "po_ref": null,
+    "status": "PAID",
+    "is_non_po": true
+  },
+  {
+    "record_id": "H-9007",
+    "case_id": "FIN-0907",
+    "vendor_id": "V-1001",
+    "invoice_ref": "INV-AC-6650",
+    "amount": "3300.00",
+    "currency": "AUD",
+    "invoice_date": "2026-08-01",
+    "po_ref": "PO-39800",
+    "status": "PAID"
+  },
+  {
+    "record_id": "H-9008",
+    "case_id": "FIN-0908",
+    "vendor_id": "V-1014",
+    "invoice_ref": "NPW-Q3-2026",
+    "amount": "3610.00",
+    "currency": "AUD",
+    "invoice_date": "2026-07-15",
+    "po_ref": null,
+    "status": "PAID",
+    "is_non_po": true
+  },
+  {
+    "record_id": "H-9009",
+    "case_id": "FIN-0909",
+    "vendor_id": "V-1018",
+    "invoice_ref": "RS-4400",
+    "amount": "6600.00",
+    "currency": "AUD",
+    "invoice_date": "2026-10-20",
+    "po_ref": "PO-39950",
+    "status": "HELD"
+  },
+  {
+    "record_id": "H-9010",
+    "case_id": "FIN-0910",
+    "vendor_id": "V-1006",
+    "invoice_ref": "FM-4300",
+    "amount": "1100.00",
+    "currency": "AUD",
+    "invoice_date": "2026-10-28",
+    "po_ref": "PO-40043",
+    "status": "PAID"
+  },
+  {
+    "record_id": "H-9011",
+    "case_id": "FIN-0911",
+    "vendor_id": "V-1002",
+    "invoice_ref": "BWL-2300",
+    "amount": "2200.00",
+    "currency": "AUD",
+    "invoice_date": "2026-11-03",
+    "po_ref": "PO-40048",
+    "status": "REJECTED",
+    "rejection_reason": "duplicate lines"
+  },
+  {
+    "record_id": "H-9012",
+    "case_id": "FIN-0912",
+    "vendor_id": "V-1024",
+    "invoice_ref": "WC-0910",
+    "amount": "300.00",
+    "currency": "AUD",
+    "invoice_date": "2026-09-20",
+    "po_ref": null,
+    "status": "PAID",
+    "is_non_po": true
+  },
+  {
+    "record_id": "H-9013",
+    "case_id": "FIN-0913",
+    "vendor_id": "V-1024",
+    "invoice_ref": "WC-1020",
+    "amount": "410.00",
+    "currency": "AUD",
+    "invoice_date": "2026-10-20",
+    "po_ref": null,
+    "status": "PAID",
+    "is_non_po": true
+  }
+]

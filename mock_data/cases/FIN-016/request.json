@@ -1,0 +1,16 @@
+{
+  "case_id": "FIN-016",
+  "invoice_ref": "OM-2290",
+  "vendor_id": "V-1015",
+  "amount": "6820.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "OM-2290.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Orbit Maintenance Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: OM-2290\nInvoice Date: 2026-11-08\nPO Number: (none)\nCurrency: AUD\nNon-PO Category: emergency\nJustification: Maintenance contract expired last month and supplier insisted on immediate payment\nEmergency Type: outage\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | CALL-OUT | Emergency call-out and repairs | services | 1.00 | 6200.00 | 6200.00\n\nSubtotal: 6200.00\nGST (10%): 620.00\nTotal Due: AUD 6820.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 5115\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

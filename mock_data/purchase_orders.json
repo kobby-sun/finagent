@@ -1,0 +1,2703 @@
+[
+  {
+    "po_ref": "PO-40001",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "HLM-200",
+        "description": "Safety helmets",
+        "category": "goods",
+        "quantity": "200.00",
+        "unit_price": "45.00",
+        "line_value": "9000.00"
+      },
+      {
+        "line_no": 2,
+        "sku": "VST-300",
+        "description": "Hi-vis vests",
+        "category": "goods",
+        "quantity": "300.00",
+        "unit_price": "25.00",
+        "line_value": "7500.00"
+      }
+    ],
+    "subtotal": "16500.00",
+    "tax": "1650.00",
+    "total": "18150.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40001-1",
+        "line_no": 1,
+        "quantity_received": "200.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      },
+      {
+        "receipt_id": "GR-40001-2",
+        "line_no": 2,
+        "quantity_received": "300.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40002",
+    "vendor_id": "V-1002",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PAL-100",
+        "description": "Pallet wrap rolls",
+        "category": "goods",
+        "quantity": "120.00",
+        "unit_price": "35.00",
+        "line_value": "4200.00"
+      }
+    ],
+    "subtotal": "4200.00",
+    "tax": "420.00",
+    "total": "4620.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40002-1",
+        "line_no": 1,
+        "quantity_received": "120.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40003",
+    "vendor_id": "V-1003",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOX-500",
+        "description": "Shipping cartons",
+        "category": "goods",
+        "quantity": "1000.00",
+        "unit_price": "7.00",
+        "line_value": "7000.00"
+      }
+    ],
+    "subtotal": "7000.00",
+    "tax": "700.00",
+    "total": "7700.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40003-1",
+        "line_no": 1,
+        "quantity_received": "1000.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40005",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PAP-A4",
+        "description": "A4 copy paper (box)",
+        "category": "goods",
+        "quantity": "100.00",
+        "unit_price": "30.00",
+        "line_value": "3000.00"
+      }
+    ],
+    "subtotal": "3000.00",
+    "tax": "300.00",
+    "total": "3300.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40005-1",
+        "line_no": 1,
+        "quantity_received": "100.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40006",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "GLV-100",
+        "description": "Cut-resistant gloves (carton)",
+        "category": "goods",
+        "quantity": "100.00",
+        "unit_price": "120.00",
+        "line_value": "12000.00"
+      }
+    ],
+    "subtotal": "12000.00",
+    "tax": "1200.00",
+    "total": "13200.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40006-1",
+        "line_no": 1,
+        "quantity_received": "100.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40007",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "TAPE-50",
+        "description": "Hazard tape",
+        "category": "goods",
+        "quantity": "50.00",
+        "unit_price": "80.00",
+        "line_value": "4000.00"
+      }
+    ],
+    "subtotal": "4000.00",
+    "tax": "400.00",
+    "total": "4400.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40007-1",
+        "line_no": 1,
+        "quantity_received": "50.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40008",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOLT-1K",
+        "description": "M10 bolts (box)",
+        "category": "goods",
+        "quantity": "500.00",
+        "unit_price": "10.00",
+        "line_value": "5000.00"
+      }
+    ],
+    "subtotal": "5000.00",
+    "tax": "500.00",
+    "total": "5500.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40008-1",
+        "line_no": 1,
+        "quantity_received": "450.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40009",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "TONER-X",
+        "description": "Toner cartridges",
+        "category": "goods",
+        "quantity": "1.00",
+        "unit_price": "2004.55",
+        "line_value": "2004.55"
+      }
+    ],
+    "subtotal": "2004.55",
+    "tax": "200.46",
+    "total": "2205.01",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40009-1",
+        "line_no": 1,
+        "quantity_received": "1.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40010",
+    "vendor_id": "V-1006",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ITEM-1",
+        "description": "Supplies",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "500.00",
+        "line_value": "5000.00"
+      }
+    ],
+    "subtotal": "5000.00",
+    "tax": "500.00",
+    "total": "5500.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40010-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40025",
+    "vendor_id": "V-1011",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ITEM-1",
+        "description": "Supplies",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "500.00",
+        "line_value": "5000.00"
+      }
+    ],
+    "subtotal": "5000.00",
+    "tax": "500.00",
+    "total": "5500.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40025-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40036",
+    "vendor_id": "V-1012",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ITEM-1",
+        "description": "Supplies",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "500.00",
+        "line_value": "5000.00"
+      }
+    ],
+    "subtotal": "5000.00",
+    "tax": "500.00",
+    "total": "5500.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40036-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40037",
+    "vendor_id": "V-1010",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ITEM-1",
+        "description": "Supplies",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "500.00",
+        "line_value": "5000.00"
+      }
+    ],
+    "subtotal": "5000.00",
+    "tax": "500.00",
+    "total": "5500.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40037-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40011",
+    "vendor_id": "V-1007",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PUMP-2",
+        "description": "Transfer pump",
+        "category": "goods",
+        "quantity": "2.00",
+        "unit_price": "1500.00",
+        "line_value": "3000.00"
+      }
+    ],
+    "subtotal": "3000.00",
+    "tax": "300.00",
+    "total": "3300.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40011-1",
+        "line_no": 1,
+        "quantity_received": "2.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40012",
+    "vendor_id": "V-1008",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "DEV-HRS",
+        "description": "Web development hours",
+        "category": "services",
+        "quantity": "40.00",
+        "unit_price": "200.00",
+        "line_value": "8000.00"
+      }
+    ],
+    "subtotal": "8000.00",
+    "tax": "800.00",
+    "total": "8800.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40012-1",
+        "line_no": 1,
+        "quantity_received": "40.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40013",
+    "vendor_id": "V-1009",
+    "currency": "USD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "SENS-10",
+        "description": "Precision sensors",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "1000.00",
+        "line_value": "10000.00"
+      }
+    ],
+    "subtotal": "10000.00",
+    "tax": "0.00",
+    "total": "10000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40013-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40014",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "LAMP-20",
+        "description": "LED work lamps",
+        "category": "goods",
+        "quantity": "20.00",
+        "unit_price": "150.00",
+        "line_value": "3000.00"
+      }
+    ],
+    "subtotal": "3000.00",
+    "tax": "300.00",
+    "total": "3300.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40014-1",
+        "line_no": 1,
+        "quantity_received": "20.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40017",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CONS-HRS",
+        "description": "Consulting hours",
+        "category": "services",
+        "quantity": "40.00",
+        "unit_price": "150.00",
+        "line_value": "6000.00"
+      }
+    ],
+    "subtotal": "6000.00",
+    "tax": "600.00",
+    "total": "6600.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40017-1",
+        "line_no": 1,
+        "quantity_received": "40.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40018",
+    "vendor_id": "V-1017",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "LAB-EQ",
+        "description": "Mass spectrometer",
+        "category": "goods",
+        "quantity": "2.00",
+        "unit_price": "150000.00",
+        "line_value": "300000.00"
+      }
+    ],
+    "subtotal": "300000.00",
+    "tax": "30000.00",
+    "total": "330000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40018-1",
+        "line_no": 1,
+        "quantity_received": "2.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40020",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PEN-BOX",
+        "description": "Ballpoint pens (box)",
+        "category": "goods",
+        "quantity": "50.00",
+        "unit_price": "50.00",
+        "line_value": "2500.00"
+      }
+    ],
+    "subtotal": "2500.00",
+    "tax": "250.00",
+    "total": "2750.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40020-1",
+        "line_no": 1,
+        "quantity_received": "50.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40021",
+    "vendor_id": "V-1020",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "HAM-20",
+        "description": "Rotary hammers",
+        "category": "goods",
+        "quantity": "20.00",
+        "unit_price": "250.00",
+        "line_value": "5000.00"
+      }
+    ],
+    "subtotal": "5000.00",
+    "tax": "500.00",
+    "total": "5500.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40021-1",
+        "line_no": 1,
+        "quantity_received": "20.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40022",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "AUDIT-HRS",
+        "description": "Internal audit support",
+        "category": "services",
+        "quantity": "20.00",
+        "unit_price": "150.00",
+        "line_value": "3000.00"
+      }
+    ],
+    "subtotal": "3000.00",
+    "tax": "300.00",
+    "total": "3300.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40022-1",
+        "line_no": 1,
+        "quantity_received": "20.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40023",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CLN-9",
+        "description": "Cleaning machine",
+        "category": "goods",
+        "quantity": "9.00",
+        "unit_price": "1000.00",
+        "line_value": "9000.00"
+      }
+    ],
+    "subtotal": "9000.00",
+    "tax": "900.00",
+    "total": "9900.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40023-1",
+        "line_no": 1,
+        "quantity_received": "9.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40024",
+    "vendor_id": "V-1013",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ADV-HRS",
+        "description": "Advisory hours",
+        "category": "services",
+        "quantity": "100.00",
+        "unit_price": "200.00",
+        "line_value": "20000.00"
+      }
+    ],
+    "subtotal": "20000.00",
+    "tax": "2000.00",
+    "total": "22000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40024-1",
+        "line_no": 1,
+        "quantity_received": "100.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40026",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CHAIR-10",
+        "description": "Ergonomic chairs",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "300.00",
+        "line_value": "3000.00"
+      },
+      {
+        "line_no": 2,
+        "sku": "FRT",
+        "description": "Freight",
+        "category": "freight",
+        "quantity": "1.00",
+        "unit_price": "100.00",
+        "line_value": "100.00"
+      }
+    ],
+    "subtotal": "3100.00",
+    "tax": "310.00",
+    "total": "3410.00",
+    "freight_allowed": true,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40026-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40027",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "STAPLER",
+        "description": "Heavy-duty staplers",
+        "category": "goods",
+        "quantity": "20.00",
+        "unit_price": "50.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40027-1",
+        "line_no": 1,
+        "quantity_received": "20.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40029",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "DESK-30",
+        "description": "Standing desks",
+        "category": "goods",
+        "quantity": "30.00",
+        "unit_price": "1000.00",
+        "line_value": "30000.00"
+      }
+    ],
+    "subtotal": "30000.00",
+    "tax": "3000.00",
+    "total": "33000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40029-1",
+        "line_no": 1,
+        "quantity_received": "30.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-dd-03",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40030",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "SIGN-5",
+        "description": "Safety signage",
+        "category": "goods",
+        "quantity": "5.00",
+        "unit_price": "300.00",
+        "line_value": "1500.00"
+      }
+    ],
+    "subtotal": "1500.00",
+    "tax": "150.00",
+    "total": "1650.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "PENDING",
+    "approved_by": null,
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40030-1",
+        "line_no": 1,
+        "quantity_received": "5.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40031",
+    "vendor_id": "V-1002",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "RACK-3",
+        "description": "Pallet racking",
+        "category": "goods",
+        "quantity": "3.00",
+        "unit_price": "1500.00",
+        "line_value": "4500.00"
+      }
+    ],
+    "subtotal": "4500.00",
+    "tax": "450.00",
+    "total": "4950.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40031-1",
+        "line_no": 1,
+        "quantity_received": "3.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40032",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "MAT-5",
+        "description": "Anti-fatigue mats",
+        "category": "goods",
+        "quantity": "5.00",
+        "unit_price": "400.00",
+        "line_value": "2000.00"
+      }
+    ],
+    "subtotal": "2000.00",
+    "tax": "200.00",
+    "total": "2200.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40032-1",
+        "line_no": 1,
+        "quantity_received": "5.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40033",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BAT-10",
+        "description": "Torch batteries",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "100.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40033-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40034",
+    "vendor_id": "V-1016",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "FRT-SVC",
+        "description": "Line-haul freight service",
+        "category": "services",
+        "quantity": "1.00",
+        "unit_price": "4000.00",
+        "line_value": "4000.00"
+      }
+    ],
+    "subtotal": "4000.00",
+    "tax": "400.00",
+    "total": "4400.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40034-1",
+        "line_no": 1,
+        "quantity_received": "1.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40038",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "TRN-DAYS",
+        "description": "Training days",
+        "category": "services",
+        "quantity": "3.00",
+        "unit_price": "1200.00",
+        "line_value": "3600.00"
+      }
+    ],
+    "subtotal": "3600.00",
+    "tax": "360.00",
+    "total": "3960.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40038-1",
+        "line_no": 1,
+        "quantity_received": "3.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40039",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ENV-500",
+        "description": "Envelopes (box of 500)",
+        "category": "goods",
+        "quantity": "500.00",
+        "unit_price": "2.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40039-1",
+        "line_no": 1,
+        "quantity_received": "500.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40040",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "FAN-2",
+        "description": "Industrial fans",
+        "category": "goods",
+        "quantity": "2.00",
+        "unit_price": "500.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40040-1",
+        "line_no": 1,
+        "quantity_received": "2.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40042",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "WORKSHOP",
+        "description": "Facilitated workshop",
+        "category": "services",
+        "quantity": "2.00",
+        "unit_price": "1750.00",
+        "line_value": "3500.00"
+      }
+    ],
+    "subtotal": "3500.00",
+    "tax": "350.00",
+    "total": "3850.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40042-1",
+        "line_no": 1,
+        "quantity_received": "2.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40041",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "KIT-1",
+        "description": "First aid kits",
+        "category": "goods",
+        "quantity": "4.00",
+        "unit_price": "250.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40041-1",
+        "line_no": 1,
+        "quantity_received": "4.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40043",
+    "vendor_id": "V-1006",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "STEEL2",
+        "description": "Steel brackets",
+        "category": "goods",
+        "quantity": "4.00",
+        "unit_price": "250.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40043-1",
+        "line_no": 1,
+        "quantity_received": "4.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40044",
+    "vendor_id": "V-1003",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOX-700",
+        "description": "Archive boxes",
+        "category": "goods",
+        "quantity": "500.00",
+        "unit_price": "7.00",
+        "line_value": "3500.00"
+      }
+    ],
+    "subtotal": "3500.00",
+    "tax": "350.00",
+    "total": "3850.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40044-1",
+        "line_no": 1,
+        "quantity_received": "500.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40045",
+    "vendor_id": "V-1022",
+    "currency": "EUR",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "LENS",
+        "description": "Optical lenses",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "400.00",
+        "line_value": "4000.00"
+      }
+    ],
+    "subtotal": "4000.00",
+    "tax": "0.00",
+    "total": "4000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40045-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40047",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CONS2-HRS",
+        "description": "Advisory hours",
+        "category": "services",
+        "quantity": "10.00",
+        "unit_price": "150.00",
+        "line_value": "1500.00"
+      }
+    ],
+    "subtotal": "1500.00",
+    "tax": "150.00",
+    "total": "1650.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40047-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40048",
+    "vendor_id": "V-1002",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "TAPE2",
+        "description": "Packing tape",
+        "category": "goods",
+        "quantity": "20.00",
+        "unit_price": "100.00",
+        "line_value": "2000.00"
+      }
+    ],
+    "subtotal": "2000.00",
+    "tax": "200.00",
+    "total": "2200.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40048-1",
+        "line_no": 1,
+        "quantity_received": "20.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40051",
+    "vendor_id": "V-1025",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "SERVER",
+        "description": "Rack servers",
+        "category": "goods",
+        "quantity": "4.00",
+        "unit_price": "75000.00",
+        "line_value": "300000.00"
+      }
+    ],
+    "subtotal": "300000.00",
+    "tax": "30000.00",
+    "total": "330000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40051-1",
+        "line_no": 1,
+        "quantity_received": "4.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40052",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOLT2",
+        "description": "Bolts",
+        "category": "goods",
+        "quantity": "100.00",
+        "unit_price": "5.00",
+        "line_value": "500.00"
+      },
+      {
+        "line_no": 2,
+        "sku": "NUT",
+        "description": "Nuts",
+        "category": "goods",
+        "quantity": "200.00",
+        "unit_price": "1.00",
+        "line_value": "200.00"
+      }
+    ],
+    "subtotal": "700.00",
+    "tax": "70.00",
+    "total": "770.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40052-1",
+        "line_no": 1,
+        "quantity_received": "80.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40053",
+    "vendor_id": "V-1023",
+    "currency": "USD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PART-X",
+        "description": "Imported parts",
+        "category": "goods",
+        "quantity": "5.00",
+        "unit_price": "400.00",
+        "line_value": "2000.00"
+      }
+    ],
+    "subtotal": "2000.00",
+    "tax": "0.00",
+    "total": "2000.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40053-1",
+        "line_no": 1,
+        "quantity_received": "5.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40054",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "KIT-2",
+        "description": "Kits",
+        "category": "goods",
+        "quantity": "2.00",
+        "unit_price": "250.00",
+        "line_value": "500.00"
+      }
+    ],
+    "subtotal": "500.00",
+    "tax": "50.00",
+    "total": "550.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40054-1",
+        "line_no": 1,
+        "quantity_received": "2.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40055",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BINDER",
+        "description": "Binders",
+        "category": "goods",
+        "quantity": "50.00",
+        "unit_price": "20.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40055-1",
+        "line_no": 1,
+        "quantity_received": "50.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40057",
+    "vendor_id": "V-1007",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "VALVE",
+        "description": "Valves",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "120.00",
+        "line_value": "1200.00"
+      }
+    ],
+    "subtotal": "1200.00",
+    "tax": "120.00",
+    "total": "1320.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40057-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40058",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CHAIR2",
+        "description": "Chairs",
+        "category": "goods",
+        "quantity": "4.00",
+        "unit_price": "250.00",
+        "line_value": "1000.00"
+      }
+    ],
+    "subtotal": "1000.00",
+    "tax": "100.00",
+    "total": "1100.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40058-1",
+        "line_no": 1,
+        "quantity_received": "4.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40059",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "REVIEW-HRS",
+        "description": "Review hours",
+        "category": "services",
+        "quantity": "10.00",
+        "unit_price": "150.00",
+        "line_value": "1500.00"
+      }
+    ],
+    "subtotal": "1500.00",
+    "tax": "150.00",
+    "total": "1650.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40059-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40060",
+    "vendor_id": "V-1018",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "FAC-DAYS",
+        "description": "Facilitation days",
+        "category": "services",
+        "quantity": "2.00",
+        "unit_price": "1200.00",
+        "line_value": "2400.00"
+      }
+    ],
+    "subtotal": "2400.00",
+    "tax": "240.00",
+    "total": "2640.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40060-1",
+        "line_no": 1,
+        "quantity_received": "2.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40066",
+    "vendor_id": "V-1020",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "GLV-NIT",
+        "description": "Nitrile gloves, box of 100",
+        "category": "goods",
+        "quantity": "20.00",
+        "unit_price": "18.00",
+        "line_value": "360.00"
+      }
+    ],
+    "subtotal": "360.00",
+    "tax": "36.00",
+    "total": "396.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40066-1",
+        "line_no": 1,
+        "quantity_received": "20.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40067",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ENV-C4",
+        "description": "Envelopes C4 (box of 250)",
+        "category": "goods",
+        "quantity": "10.00",
+        "unit_price": "21.00",
+        "line_value": "210.00"
+      }
+    ],
+    "subtotal": "210.00",
+    "tax": "21.00",
+    "total": "231.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40067-1",
+        "line_no": 1,
+        "quantity_received": "10.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40068",
+    "vendor_id": "V-1003",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOX-L",
+        "description": "Packing boxes, large",
+        "category": "goods",
+        "quantity": "100.00",
+        "unit_price": "3.50",
+        "line_value": "350.00"
+      }
+    ],
+    "subtotal": "350.00",
+    "tax": "35.00",
+    "total": "385.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40068-1",
+        "line_no": 1,
+        "quantity_received": "100.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40069",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "GLS-10",
+        "description": "Safety glasses, box of 10",
+        "category": "goods",
+        "quantity": "30.00",
+        "unit_price": "42.00",
+        "line_value": "1260.00"
+      }
+    ],
+    "subtotal": "1260.00",
+    "tax": "126.00",
+    "total": "1386.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40069-1",
+        "line_no": 1,
+        "quantity_received": "30.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40070",
+    "vendor_id": "V-1004",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CLN-MTH",
+        "description": "Office cleaning, November",
+        "category": "services",
+        "quantity": "1.00",
+        "unit_price": "3200.00",
+        "line_value": "3200.00"
+      }
+    ],
+    "subtotal": "3200.00",
+    "tax": "320.00",
+    "total": "3520.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40070-1",
+        "line_no": 1,
+        "quantity_received": "1.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40071",
+    "vendor_id": "V-1003",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CTN-L",
+        "description": "Shipping cartons, large",
+        "category": "goods",
+        "quantity": "100.00",
+        "unit_price": "6.00",
+        "line_value": "600.00"
+      }
+    ],
+    "subtotal": "600.00",
+    "tax": "60.00",
+    "total": "660.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40071-1",
+        "line_no": 1,
+        "quantity_received": "100.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40072",
+    "vendor_id": "V-1019",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "CUR-MTH",
+        "description": "Courier services, November",
+        "category": "services",
+        "quantity": "1.00",
+        "unit_price": "1800.00",
+        "line_value": "1800.00"
+      }
+    ],
+    "subtotal": "1800.00",
+    "tax": "180.00",
+    "total": "1980.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40072-1",
+        "line_no": 1,
+        "quantity_received": "1.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": true
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40073",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "PEN-BLK",
+        "description": "Ballpoint pens, black (box of 50)",
+        "category": "goods",
+        "quantity": "12.00",
+        "unit_price": "9.50",
+        "line_value": "114.00"
+      }
+    ],
+    "subtotal": "114.00",
+    "tax": "11.40",
+    "total": "125.40",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40073-1",
+        "line_no": 1,
+        "quantity_received": "12.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40074",
+    "vendor_id": "V-1001",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "TAPE-100",
+        "description": "Hazard tape 100 m",
+        "category": "goods",
+        "quantity": "40.00",
+        "unit_price": "12.00",
+        "line_value": "480.00"
+      }
+    ],
+    "subtotal": "480.00",
+    "tax": "48.00",
+    "total": "528.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40074-1",
+        "line_no": 1,
+        "quantity_received": "40.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40075",
+    "vendor_id": "V-1005",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "ENV-DL",
+        "description": "Envelopes DL (box of 500)",
+        "category": "goods",
+        "quantity": "6.00",
+        "unit_price": "19.00",
+        "line_value": "114.00"
+      }
+    ],
+    "subtotal": "114.00",
+    "tax": "11.40",
+    "total": "125.40",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40075-1",
+        "line_no": 1,
+        "quantity_received": "6.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40076",
+    "vendor_id": "V-1003",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOX-M",
+        "description": "Packing boxes, medium",
+        "category": "goods",
+        "quantity": "200.00",
+        "unit_price": "2.40",
+        "line_value": "480.00"
+      }
+    ],
+    "subtotal": "480.00",
+    "tax": "48.00",
+    "total": "528.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40076-1",
+        "line_no": 1,
+        "quantity_received": "200.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  },
+  {
+    "po_ref": "PO-40077",
+    "vendor_id": "V-1003",
+    "currency": "AUD",
+    "lines": [
+      {
+        "line_no": 1,
+        "sku": "BOX-S",
+        "description": "Packing boxes, small",
+        "category": "goods",
+        "quantity": "300.00",
+        "unit_price": "1.80",
+        "line_value": "540.00"
+      }
+    ],
+    "subtotal": "540.00",
+    "tax": "54.00",
+    "total": "594.00",
+    "freight_allowed": false,
+    "fx_conversion_permitted": false,
+    "tolerances": {
+      "goods_abs": "50.00",
+      "goods_pct": "0.01",
+      "services_abs": "100.00",
+      "services_pct": "0.02",
+      "freight_abs": "75.00"
+    },
+    "approval_status": "APPROVED",
+    "approved_by": "u-dd-01",
+    "requester_id": "u-req-11",
+    "payment_terms_days": null,
+    "goods_receipts": [
+      {
+        "receipt_id": "GR-40077-1",
+        "line_no": 1,
+        "quantity_received": "300.00",
+        "received_at": "2026-11-03T15:00:00+11:00",
+        "receipted_by": "u-rcv-21",
+        "service_confirmed": false
+      }
+    ],
+    "last_updated": "2026-11-03T15:05:00+11:00"
+  }
+]

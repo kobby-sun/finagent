@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "RS-4500",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Redwood Services Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": null,
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "TRN-DAYS",
+      "description": "Training days",
+      "category": "services",
+      "quantity": "3.00",
+      "unit_price": "1200.00",
+      "amount": "3600.00"
+    }
+  ],
+  "subtotal": "3600.00",
+  "tax": "360.00",
+  "total": "3960.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "1818",
+    "bank_country": "AU"
+  }
+}

@@ -1,0 +1,285 @@
+# Policy baseline: the section texts the code-based controls (skills/) were verified against.
+# If the corpus differs from this, every case is held until maintenance is done (docs/governance.md).
+# Regenerate only as the last step of a policy maintenance release:
+#   finagent policy baseline --reviewer <id> --note <why>
+reviewed_by: finagent build (NOT yet reviewed by a finance owner - see docs/governance.md)
+reviewed_at: '2026-11-14'
+note: Hand-written controls in skills/ were built and tested (skill fixtures + 63 scenarios) against these texts. A finance owner should
+  review the interpretations in docs/governance.md and re-baseline with their own id.
+sections:
+  FIN-POL-001#s1:
+    version: '3.2'
+    title: 1. Purpose
+    hash: bb6728d642785079
+    basis: informational / not automated
+  FIN-POL-001#s2:
+    version: '3.2'
+    title: 2. Minimum evidence
+    hash: 393ebe81b3727546
+    basis: enforced by evidence_completeness, invoice_csv_parser, invoice_json_parser, invoice_text_parser, pdf_parser
+  FIN-POL-001#s3:
+    version: '3.2'
+    title: 3. Processing outcome
+    hash: d3ac7dbd09788f78
+    basis: enforced by authority_routing
+  FIN-POL-001#s4:
+    version: '3.2'
+    title: 4. Segregation of duties
+    hash: 401ff40124db9fae
+    basis: enforced by authority_routing, param:sod.distinct_people_above_aud, param:sod.recent_change_business_days, vendor_compliance
+  FIN-POL-001#s5:
+    version: '3.2'
+    title: 5. Required checks
+    hash: cb214070fb30f687
+    basis: enforced by evidence_completeness
+  FIN-POL-001#s6:
+    version: '3.2'
+    title: 6. Audit trail
+    hash: 27d4ab9485123685
+    basis: informational / not automated
+  FIN-POL-002#s1:
+    version: '2.4'
+    title: 1. Matching basis
+    hash: d16d4ba9c407cad2
+    basis: enforced by three_way_match
+  FIN-POL-002#s2:
+    version: '2.4'
+    title: 2. Tolerances
+    hash: 87c0f591e9d28e90
+    basis: enforced by param:match.freight_abs_aud, param:match.goods_abs_aud, param:match.goods_pct, param:match.services_abs_aud, param:match.services_pct,
+      three_way_match
+  FIN-POL-002#s3:
+    version: '2.4'
+    title: 3. Outcomes
+    hash: 49df469bf8e7feab
+    basis: enforced by three_way_match
+  FIN-POL-002#s4:
+    version: '2.4'
+    title: 4. Missing receipt
+    hash: 23d795b687ce3707
+    basis: enforced by invoice_text_parser, three_way_match
+  FIN-POL-002#s5:
+    version: '2.4'
+    title: 5. Calculation rule
+    hash: 4733336c01c569df
+    basis: enforced by invoice_csv_parser, three_way_match
+  FIN-POL-003#s1:
+    version: '4.0'
+    title: 1. General rules
+    hash: ac8ebaa4488f9d7f
+    basis: enforced by authority_routing
+  FIN-POL-003#s2:
+    version: '4.0'
+    title: 2. Standard operating expenditure
+    hash: ec5fe87e97eeb3c4
+    basis: enforced by authority_routing
+  FIN-POL-003#s3:
+    version: '4.0'
+    title: 3. Higher-risk transactions
+    hash: 399b0c47dc22d557
+    basis: enforced by authority_routing, param:vendor.new_vendor_days, vendor_compliance
+  FIN-POL-003#s4:
+    version: '4.0'
+    title: 4. Delegations
+    hash: 75d3a3c2cf635d44
+    basis: enforced by authority_routing
+  FIN-POL-003#s5:
+    version: '4.0'
+    title: 5. Approval evidence
+    hash: 8628d1fa0d83d875
+    basis: enforced by authority_routing
+  FIN-POL-004#s1:
+    version: '5.1'
+    title: 1. New vendors
+    hash: 60a996d1179d2783
+    basis: informational / not automated
+  FIN-POL-004#s2:
+    version: '5.1'
+    title: 2. Bank-account changes
+    hash: 793120ba102b1d75
+    basis: enforced by email_parser, param:vendor.bank_change_hold_business_days, vendor_compliance
+  FIN-POL-004#s3:
+    version: '5.1'
+    title: 3. Prohibited automation
+    hash: e3cb6a2fc3d3db3b
+    basis: enforced by instruction_screen, vendor_compliance
+  FIN-POL-004#s4:
+    version: '5.1'
+    title: 4. Vendor status
+    hash: b0b03b08af3628e9
+    basis: enforced by vendor_compliance
+  FIN-POL-005#s1:
+    version: '2.8'
+    title: 1. Duplicate detection
+    hash: 3eadc1c9f30b4622
+    basis: enforced by duplicate_detection
+  FIN-POL-005#s2:
+    version: '2.8'
+    title: 2. Outcomes
+    hash: a2e8e55e96e1225c
+    basis: enforced by duplicate_detection
+  FIN-POL-005#s3:
+    version: '2.8'
+    title: 3. Fraud indicators
+    hash: 3a6203d2bda5f31d
+    basis: enforced by email_parser, fraud_indicator_scoring, instruction_screen, param:fraud.escalation_indicator_count
+  FIN-POL-005#s4:
+    version: '2.8'
+    title: 4. Model limitations
+    hash: e45fb9420940925a
+    basis: enforced by fraud_indicator_scoring, instruction_screen
+  FIN-POL-006#s1:
+    version: '3.0'
+    title: 1. Standard terms
+    hash: b35273891ad5314c
+    basis: enforced by param:payment.default_terms_days, payment_scheduling
+  FIN-POL-006#s2:
+    version: '3.0'
+    title: 2. Scheduling
+    hash: e921dbeae67a6304
+    basis: enforced by param:payment.run_weekdays, payment_scheduling
+  FIN-POL-006#s3:
+    version: '3.0'
+    title: 3. Early and manual payments
+    hash: 26ff239409347cad
+    basis: informational / not automated
+  FIN-POL-006#s4:
+    version: '3.0'
+    title: 4. Payment-file control
+    hash: 17a8537f643030bc
+    basis: enforced by payment_scheduling
+  FIN-POL-007#s1:
+    version: '1.9'
+    title: 1. Exception categories
+    hash: 56b535f25a70cd33
+    basis: informational / not automated
+  FIN-POL-007#s2:
+    version: '1.9'
+    title: 2. Required exception record
+    hash: fbd2809ba367ce78
+    basis: enforced by evidence_completeness
+  FIN-POL-007#s3:
+    version: '1.9'
+    title: 3. Escalation targets
+    hash: fd0489175831d6f3
+    basis: enforced by fraud_indicator_scoring
+  FIN-POL-007#s4:
+    version: '1.9'
+    title: 4. Service levels
+    hash: 06d5ffe6c645e17a
+    basis: informational / not automated
+  FIN-POL-007#s5:
+    version: '1.9'
+    title: 5. Resumption
+    hash: 22786a525a9362ce
+    basis: informational / not automated
+  FIN-POL-008#s1:
+    version: '2.1'
+    title: 1. Credit notes
+    hash: db64b344cda9b7f1
+    basis: enforced by credit_note_validation, invoice_json_parser
+  FIN-POL-008#s2:
+    version: '2.1'
+    title: 2. Application order
+    hash: de305e1489133e91
+    basis: enforced by credit_note_validation
+  FIN-POL-008#s3:
+    version: '2.1'
+    title: 3. Overpayments
+    hash: ec1bc6f0bcafe18c
+    basis: informational / not automated
+  FIN-POL-008#s4:
+    version: '2.1'
+    title: 4. Refund verification
+    hash: 746402000215c0e1
+    basis: informational / not automated
+  FIN-POL-008#s5:
+    version: '2.1'
+    title: 5. Write-offs
+    hash: c5117bc1fb4b1c17
+    basis: informational / not automated
+  FIN-POL-009#s1:
+    version: '1.6'
+    title: 1. Currency agreement
+    hash: c080bda97bbbb097
+    basis: enforced by three_way_match
+  FIN-POL-009#s2:
+    version: '1.6'
+    title: 2. Conversion
+    hash: 9f89b7de053d1552
+    basis: enforced by fx_validation
+  FIN-POL-009#s3:
+    version: '1.6'
+    title: 3. Variance
+    hash: 9293ae3cdd9ddf38
+    basis: enforced by fx_validation, three_way_match
+  FIN-POL-009#s4:
+    version: '1.6'
+    title: 4. Overseas accounts
+    hash: dcff69f4bc9cf050
+    basis: enforced by param:vendor.screening_max_age_hours, vendor_compliance
+  FIN-POL-010#s1:
+    version: '4.3'
+    title: 1. Retention
+    hash: 2ec968fc022bf8bd
+    basis: informational / not automated
+  FIN-POL-010#s2:
+    version: '4.3'
+    title: 2. Minimum necessary data
+    hash: 09630dd8a20dc80e
+    basis: enforced by pdf_parser
+  FIN-POL-010#s3:
+    version: '4.3'
+    title: 3. Access
+    hash: c4060b0e7b096f1e
+    basis: informational / not automated
+  FIN-POL-010#s4:
+    version: '4.3'
+    title: 4. Model providers
+    hash: 1c948ff71baa1e5b
+    basis: informational / not automated
+  FIN-POL-010#s5:
+    version: '4.3'
+    title: 5. Deletion and legal hold
+    hash: 6f6e1576be12009c
+    basis: informational / not automated
+  FIN-POL-011#s1:
+    version: '2.7'
+    title: 1. Cut-off
+    hash: 1e6a3e1d04b92f10
+    basis: informational / not automated
+  FIN-POL-011#s2:
+    version: '2.7'
+    title: 2. Accrual evidence
+    hash: 2e5196726dcbbeb1
+    basis: informational / not automated
+  FIN-POL-011#s3:
+    version: '2.7'
+    title: 3. Thresholds
+    hash: 39958feec1d4961f
+    basis: informational / not automated
+  FIN-POL-011#s4:
+    version: '2.7'
+    title: 4. Agent use
+    hash: b08c028ff388e60a
+    basis: informational / not automated
+  FIN-POL-012#s1:
+    version: '3.5'
+    title: 1. Non-PO invoices
+    hash: 96a49c09545108d5
+    basis: enforced by non_po_validation, param:non_po.allowed_categories
+  FIN-POL-012#s2:
+    version: '3.5'
+    title: 2. Emergency definition
+    hash: 871b137f8854481e
+    basis: enforced by non_po_validation
+  FIN-POL-012#s3:
+    version: '3.5'
+    title: 3. Evidence and approval
+    hash: 10f936fc6bd9d57f
+    basis: enforced by authority_routing, non_po_validation, param:non_po.director_max_aud
+  FIN-POL-012#s4:
+    version: '3.5'
+    title: 4. Repeated use
+    hash: 3400775d09ae6957
+    basis: enforced by non_po_validation, param:non_po.repeat_threshold, param:non_po.repeat_window_days

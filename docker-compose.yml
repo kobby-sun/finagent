@@ -1,0 +1,45 @@
+# Local stack. ONE command for everything:   make up   (scripts/dev/docker_up.sh)
+#   picks the models (Ollama on this machine if running, else an Ollama container + pulls them; MODELS=mock for none),
+#   builds and starts finagent with the trained search model, waits until healthy and prints what it uses.
+#   make docker-test · make docker-eval · make down · make down-clean
+# By hand:
+#   docker compose --profile ollama up --build                  # finagent + Ollama container (pull models into it)
+#   docker compose --profile train run --rm embed-train          # fine-tune + evaluate the embedding model (CPU)
+#   INSTALL_EMBEDDINGS=false docker compose up --build           # slim image: keyword search only (BM25 fallback)
+services:
+  finagent:
+    build:
+      context: .
+      args:
+        INSTALL_EMBEDDINGS: ${INSTALL_EMBEDDINGS:-true}   # false = slim keyword-only image
+    ports: ["8080:8080"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      FINAGENT__LLM__PROVIDERS__OLLAMA__BASE_URL: ${OLLAMA_URL:-http://ollama:11434}   # make up sets this (host or container Ollama)
+      FINAGENT__SKILLS__LLM__USE_MOCK: ${USE_MOCK_MODELS:-false}                       # MODELS=mock: no models needed
+    extra_hosts: ["host.docker.internal:host-gateway"]                                  # reach Ollama on the host (Linux too)
+    volumes:
+      - finagent-data:/data
+  ollama:
+    image: ollama/ollama:0.12.6
+    profiles: ["ollama"]
+    ports: ["11434:11434"]
+    volumes: ["ollama-models:/root/.ollama"]
+  embed-train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    profiles: ["train"]
+    environment:
+      BASE_MODEL: ${BASE_MODEL:-BAAI/bge-small-en-v1.5}
+      EPOCHS: ${EPOCHS:-3}
+    volumes:
+      - ./training/embeddings:/app/training/embeddings       # pairs, eval_report.json written here
+      - ./models:/app/models                                 # the trained embedder is saved here
+      - hf-cache:/hf-cache
+volumes:
+  finagent-data: {}
+  ollama-models: {}
+  hf-cache: {}

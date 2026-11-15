@@ -1,0 +1,81 @@
+# Fixtures for skill 'authority_routing'. Run: finagent skills test authority_routing
+skill: authority_routing
+fixtures:
+- id: ar-ccm
+  case: FIN-007
+  description: AUD 4,433 => Cost Centre Manager
+  expect:
+    votes: []
+    approval_slots:
+    - primary
+    data:
+      required_role: Cost Centre Manager
+- id: ar-dd
+  case: FIN-001
+  description: AUD 18,150 => Department Director
+  expect:
+    votes: []
+    approval_slots:
+    - primary
+    data:
+      required_role: Department Director
+- id: ar-cfo
+  case: FIN-018
+  description: AUD 330,000 => CFO under v4.0 (old matrix would say ED)
+  expect:
+    votes: []
+    data:
+      required_role: Chief Financial Officer
+- id: ar-ceo
+  case: FIN-018
+  description: Above AUD 1,000,000 => CEO
+  patch:
+    invoice.total: '1200000.00'
+  expect:
+    votes: []
+    data:
+      required_role: Chief Executive Officer
+- id: ar-high-risk-new-vendor
+  case: FIN-012
+  description: New vendor => + Financial Control
+  expect:
+    votes: []
+    approval_slots:
+    - primary
+    - financial_control
+- id: ar-fx-overseas
+  case: FIN-013
+  description: AUD 15,200 overseas => DD + Financial Control
+  expect:
+    votes: []
+    approval_slots:
+    - primary
+    - financial_control
+    data:
+      required_role: Department Director
+- id: ar-non-po-small
+  case: FIN-015
+  description: Non-PO <= 10k => Department Director (FIN-POL-012 s3)
+  expect:
+    votes: []
+    approval_slots:
+    - primary
+- id: ar-stale-register
+  case: FIN-001
+  description: Register not aligned to FIN-POL-003 v4 => hold
+  patch:
+    evidence.authority.version: '1.0'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - AUTHORITY_GAP
+    findings:
+      authority_register: FAIL
+- id: ar-sod-above-25k
+  case: FIN-029
+  description: '> AUD 25k requires distinct requester/receipter/approver'
+  expect:
+    votes: []
+    findings:
+      segregation_of_duties: PASS

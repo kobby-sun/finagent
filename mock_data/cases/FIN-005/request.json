@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-005",
+  "invoice_ref": "EOS-5512",
+  "vendor_id": "V-1005",
+  "amount": "3300.00",
+  "currency": "AUD",
+  "po_ref": "PO-40005",
+  "attachments": [
+    {
+      "filename": "EOS-5512.csv",
+      "content_type": "text/csv",
+      "content": "# invoice_number=EOS-5512\n# invoice_date=2026-11-05\n# vendor_name=Evergreen Office Supplies Pty Ltd\n# bill_to=Northstar Group Pty Ltd\n# currency=AUD\n# po_ref=PO-40005\n# subtotal=3000.00\n# tax=300.00\n# total=3300.00\nline_no,sku,description,category,quantity,unit_price,amount\n1,PAP-A4,A4 copy paper (box),goods,100.00,30.00,3000.00\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

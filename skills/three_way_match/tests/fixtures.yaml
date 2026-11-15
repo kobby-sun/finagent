@@ -1,0 +1,162 @@
+# Fixtures for skill 'three_way_match'. Run: finagent skills test three_way_match
+skill: three_way_match
+fixtures:
+- id: twm-valid
+  case: FIN-001
+  description: Exact match, all lines received
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      three_way_match: PASS
+    calculations:
+      price_variance: true
+      quantity_check: true
+      tax_check: true
+      invoice_total: true
+- id: twm-price-over
+  case: FIN-006
+  description: +150 > min(50, 120)
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - PRICE_VARIANCE
+    calculations:
+      price_variance: false
+- id: twm-price-within
+  case: FIN-007
+  description: +30 <= min(50, 40)
+  expect:
+    votes: []
+    exceptions: []
+    calculations:
+      price_variance: true
+- id: twm-boundary-equal
+  case: FIN-007
+  description: Variance exactly 40.00 = threshold passes (<=)
+  patch:
+    invoice.lines.0.amount: '4040.00'
+    invoice.subtotal: '4040.00'
+    invoice.tax: '404.00'
+    invoice.total: '4444.00'
+  expect:
+    votes: []
+    exceptions: []
+    calculations:
+      price_variance: true
+- id: twm-boundary-plus-1c
+  case: FIN-007
+  description: Variance 40.01 fails by one cent
+  patch:
+    invoice.lines.0.amount: '4040.01'
+    invoice.subtotal: '4040.01'
+    invoice.tax: '404.00'
+    invoice.total: '4444.01'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - PRICE_VARIANCE
+    calculations:
+      price_variance: false
+- id: twm-quantity
+  case: FIN-008
+  description: 500 invoiced vs 450 received
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - QUANTITY_VARIANCE
+    calculations:
+      quantity_check: false
+- id: twm-services-within
+  case: FIN-017
+  description: Services +80 <= min(100, 120)
+  expect:
+    votes: []
+    exceptions: []
+- id: twm-services-unconfirmed
+  case: FIN-017
+  description: Service not confirmed => missing receipt
+  patch:
+    evidence.po.goods_receipts.0.service_confirmed: false
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - MISSING_RECEIPT
+- id: twm-freight-within
+  case: FIN-026
+  description: Freight +60 <= 75 when PO permits freight
+  expect:
+    votes: []
+    exceptions: []
+    calculations:
+      freight_variance: true
+- id: twm-freight-over
+  case: FIN-026
+  description: Freight +80 > 75
+  patch:
+    invoice.lines.1.amount: '180.00'
+    invoice.subtotal: '3180.00'
+    invoice.tax: '318.00'
+    invoice.total: '3498.00'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - PRICE_VARIANCE
+    calculations:
+      freight_variance: false
+- id: twm-po-timeout
+  case: FIN-004
+  description: PO service timed out; no receipt; delivery language ignored
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - MISSING_PO
+    - MISSING_RECEIPT
+    findings:
+      three_way_match: UNKNOWN
+      receipt: UNKNOWN
+    unknowns_min: 2
+- id: twm-po-not-approved
+  case: FIN-030
+  description: PO approval pending
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - AUTHORITY_GAP
+    findings:
+      po_approval: FAIL
+- id: twm-currency-mismatch
+  case: FIN-014
+  description: AUD PO, USD invoice, conversion not permitted
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      currency_agreement: FAIL
+- id: twm-tax-query
+  case: FIN-032
+  description: 15% tax on a 10% GST PO
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - TAX_QUERY
+    calculations:
+      tax_check: false
+- id: twm-same-foreign-currency
+  case: FIN-013
+  description: USD invoice on USD PO matches
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      currency_agreement: PASS

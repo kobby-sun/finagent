@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-039",
+  "invoice_ref": "EOS-5620",
+  "vendor_id": "V-1005",
+  "amount": "1100.00",
+  "currency": "AUD",
+  "po_ref": "PO-40039",
+  "attachments": [
+    {
+      "filename": "EOS-5620.eml",
+      "content_type": "message/rfc822",
+      "content": "From: Accounts <accounts@evergreen-office.example>\nTo: ap@northstar.example\nSubject: Invoice EOS-5620\nDate: Mon, 09 Nov 2026 09:12:00 +1100\nContent-Type: text/plain; charset=utf-8\n\nTAX INVOICE\nSupplier: Evergreen Office Supplies Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: EOS-5620\nInvoice Date: 2026-11-09\nPO Number: PO-40039\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | ENV-500 | Envelopes (box of 500) | goods | 500.00 | 2.00 | 1000.00\n\nSubtotal: 1000.00\nGST (10%): 100.00\nTotal Due: AUD 1100.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 3090\n\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

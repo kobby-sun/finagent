@@ -1,0 +1,107 @@
+### finagent API request collection (VS Code REST Client / JetBrains HTTP Client)
+### Start the server: scripts/dev/serve.sh   Swagger UI: http://localhost:8080/docs
+@base = http://localhost:8080
+@key = change-me
+
+### Health (model, index version, workflow digest)
+GET {{base}}/healthz
+
+### Start run FIN-001 (valid three-way match) - body file from mock data
+# @name start
+POST {{base}}/runs
+Content-Type: application/json
+X-API-Key: {{key}}
+Idempotency-Key: demo-fin-001
+
+< ../../mock_data/cases/FIN-001/request.json
+
+### Get run (status, current node, result, audit events)
+GET {{base}}/runs/{{start.response.body.run_id}}
+X-API-Key: {{key}}
+
+### Approval request with explanation
+GET {{base}}/approvals/{{start.response.body.approval.approval_id}}
+X-API-Key: {{key}}
+
+### Approve - insufficient authority (Cost Centre Manager, AUD 18,150) -> 403
+POST {{base}}/approvals/{{start.response.body.approval.approval_id}}/decision
+Content-Type: application/json
+X-API-Key: {{key}}
+
+{"decision": "APPROVE", "approver_id": "u-ccm-01", "callback_id": "http-cb-0"}
+
+### Approve - Department Director -> run resumes and submits once
+POST {{base}}/approvals/{{start.response.body.approval.approval_id}}/decision
+Content-Type: application/json
+X-API-Key: {{key}}
+
+{"decision": "APPROVE", "approver_id": "u-dd-01", "comment": "Checked PO and receipt", "callback_id": "http-cb-1"}
+
+### Duplicate callback (same callback_id) -> replayed, no new decision
+POST {{base}}/approvals/{{start.response.body.approval.approval_id}}/decision
+Content-Type: application/json
+X-API-Key: {{key}}
+
+{"decision": "APPROVE", "approver_id": "u-dd-01", "comment": "Checked PO and receipt", "callback_id": "http-cb-1"}
+
+### Poisoned document FIN-003 -> ESCALATE, no approval
+POST {{base}}/runs
+Content-Type: application/json
+X-API-Key: {{key}}
+
+< ../../mock_data/cases/FIN-003/request.json
+
+### Missing evidence FIN-004 -> PO timeout, HOLD
+POST {{base}}/runs
+Content-Type: application/json
+X-API-Key: {{key}}
+
+< ../../mock_data/cases/FIN-004/request.json
+
+### Held case FIN-038 then add evidence
+# @name held
+POST {{base}}/runs
+Content-Type: application/json
+X-API-Key: {{key}}
+
+< ../../mock_data/cases/FIN-038/request.json
+
+###
+POST {{base}}/runs/{{held.response.body.run_id}}/evidence
+Content-Type: application/json
+X-API-Key: {{key}}
+
+{"po_ref": "PO-40038", "note": "Requester confirms PO-40038 covers this training."}
+
+### Outcome pool
+GET {{base}}/outcomes?pool_status=HELD
+X-API-Key: {{key}}
+
+###
+GET {{base}}/outcomes/summary
+X-API-Key: {{key}}
+
+### Subscribe a webhook (run `finagent webhooks listen --port 9099` first)
+POST {{base}}/webhooks/subscriptions
+Content-Type: application/json
+X-API-Key: {{key}}
+
+{"url": "http://localhost:9099/hooks", "events": ["*"]}
+
+### Event feed
+GET {{base}}/webhooks/events
+X-API-Key: {{key}}
+
+### Evaluation (required cases)
+POST {{base}}/evaluations/run
+Content-Type: application/json
+X-API-Key: {{key}}
+
+{"cases": ["FIN-001", "FIN-002", "FIN-003", "FIN-004", "FIN-005"]}
+
+### Audit chain
+GET {{base}}/audit/verify
+X-API-Key: {{key}}
+
+### Catalog
+GET {{base}}/catalog/workflow

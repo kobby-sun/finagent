@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "finagent"
+version = "0.1.0"
+description = "Production-minded accounts-payable RAG workflow agent with approval gates, audit trail and resumable runs"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic==2.14.3",
+  "fastapi==0.162.7",
+  "uvicorn==0.54.0",
+  "httpx==0.28.1",
+  "PyYAML==6.0.3",
+  "pillow==11.3.0",                 # PNG run diagrams
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.2.0", "pypdf==7.1.0"]
+anthropic = ["anthropic"]          # Claude API / Bedrock Mantle adapter
+pdf = ["pypdf==7.1.0"]                    # PDF attachments and PDF corpus documents
+embeddings = ["sentence-transformers", "datasets", "accelerate"]   # embedding fine-tuning + local fine-tuned embedder
+training = ["mlx-lm"]              # optional LoRA fine-tuning on Apple Silicon
+
+[project.scripts]
+finagent = "finagent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+  "llm: model-dependent integration tests (require a real LLM endpoint; skipped by default)",
+]
+addopts = "-m 'not llm'"

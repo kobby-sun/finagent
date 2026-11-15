@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-006",
+  "invoice_ref": "INV-AC-7790",
+  "vendor_id": "V-1001",
+  "amount": "13365.00",
+  "currency": "AUD",
+  "po_ref": "PO-40006",
+  "attachments": [
+    {
+      "filename": "INV-AC-7790.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"INV-AC-7790\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40006\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"GLV-100\",\n      \"description\": \"Cut-resistant gloves (carton)\",\n      \"category\": \"goods\",\n      \"quantity\": \"100.00\",\n      \"unit_price\": \"121.50\",\n      \"amount\": \"12150.00\"\n    }\n  ],\n  \"subtotal\": \"12150.00\",\n  \"tax\": \"1215.00\",\n  \"total\": \"13365.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"4410\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

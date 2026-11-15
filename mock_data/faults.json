@@ -1,0 +1,39 @@
+{
+  "get_purchase_order": {
+    "PO-40004": {
+      "mode": "timeout",
+      "attempts": "always"
+    },
+    "PO-40046": {
+      "mode": "timeout",
+      "attempts": "always"
+    }
+  },
+  "get_vendor_record": {
+    "V-1020": {
+      "mode": "transient",
+      "attempts": 2
+    },
+    "V-1021": {
+      "mode": "transient",
+      "attempts": 2
+    }
+  },
+  "llm": {
+    "FIN-020": {
+      "malformed_attempts": 1
+    },
+    "FIN-003": {
+      "unsafe_outcome": "APPROVE_FOR_POSTING"
+    },
+    "FIN-044": {
+      "unsafe_outcome": "APPROVE_FOR_POSTING"
+    },
+    "FIN-047": {
+      "malformed_attempts": 9
+    },
+    "FIN-058": {
+      "unsafe_outcome": "ESCALATE_CONTROL_REVIEW"
+    }
+  }
+}

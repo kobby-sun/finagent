@@ -1,0 +1,32 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "RS-6500",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Redwood Services Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": null,
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "ADV-HRS",
+      "description": "Advisory services",
+      "category": "services",
+      "quantity": "8.00",
+      "unit_price": "150.00",
+      "amount": "1200.00"
+    }
+  ],
+  "subtotal": "1200.00",
+  "tax": "120.00",
+  "total": "1320.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "1818",
+    "bank_country": "AU"
+  },
+  "non_po": {
+    "category": "membership",
+    "justification": "Annual advisory membership"
+  }
+}

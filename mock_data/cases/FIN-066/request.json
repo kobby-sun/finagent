@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-066",
+  "invoice_ref": "TH-6600",
+  "vendor_id": "V-1020",
+  "amount": "396.00",
+  "currency": "AUD",
+  "po_ref": "PO-40066",
+  "attachments": [
+    {
+      "filename": "TH-6600.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"TH-6600\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Tidal Hardware Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40066\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"GLV-NIT\",\n      \"description\": \"Nitrile gloves, carton of 10 boxes\",\n      \"category\": \"goods\",\n      \"quantity\": \"20.00\",\n      \"unit_price\": \"18.00\",\n      \"amount\": \"360.00\"\n    }\n  ],\n  \"subtotal\": \"360.00\",\n  \"tax\": \"36.00\",\n  \"total\": \"396.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"2020\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

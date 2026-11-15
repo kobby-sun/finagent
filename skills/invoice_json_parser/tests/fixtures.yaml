@@ -1,0 +1,39 @@
+# Fixtures for skill 'invoice_json_parser'. Run: finagent skills test invoice_json_parser
+skill: invoice_json_parser
+fixtures:
+- id: json-invoice
+  input:
+    file: mock_data/cases/FIN-001/attachments/INV-AC-7781.json
+    content_type: application/json
+  expect:
+    doc_kind: invoice
+    invoice_number: INV-AC-7781
+    total: '18150.00'
+    tax: '1650.00'
+    lines: 2
+    bank_last4: '4410'
+    parser: invoice_json_parser
+- id: json-credit-note
+  input:
+    file: mock_data/cases/FIN-019/attachments/CN-AC-0042.json
+    content_type: application/json
+  expect:
+    doc_kind: credit_note
+    original_invoice_ref: INV-AC-7700
+    total: '1650.00'
+- id: json-invalid
+  input:
+    content: '{not json'
+    filename: broken.json
+    content_type: application/json
+  expect:
+    doc_kind: supporting
+    warnings_contain: invalid JSON
+- id: json-non-po
+  input:
+    file: mock_data/cases/FIN-016/attachments/OM-2290.txt
+    content_type: text/plain
+  expect:
+    doc_kind: invoice
+    invoice_number: OM-2290
+    parser: invoice_text_parser

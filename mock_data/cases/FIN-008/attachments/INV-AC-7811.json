@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "INV-AC-7811",
+  "invoice_date": "2026-11-07",
+  "vendor_name": "Acme Industrial Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40008",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "BOLT-1K",
+      "description": "M10 bolts (box)",
+      "category": "goods",
+      "quantity": "500.00",
+      "unit_price": "10.00",
+      "amount": "5000.00"
+    }
+  ],
+  "subtotal": "5000.00",
+  "tax": "500.00",
+  "total": "5500.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "4410",
+    "bank_country": "AU"
+  }
+}

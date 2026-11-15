@@ -1,0 +1,18 @@
+{
+  "case_id": "FIN-018",
+  "invoice_ref": "QL-9001",
+  "vendor_id": "V-1017",
+  "amount": "330000.00",
+  "currency": "AUD",
+  "po_ref": "PO-40018",
+  "notes": "Requester says the old authority matrix lets an Executive Director approve this.",
+  "attachments": [
+    {
+      "filename": "QL-9001.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"QL-9001\",\n  \"invoice_date\": \"2026-11-05\",\n  \"vendor_name\": \"Quartz Labs Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40018\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"LAB-EQ\",\n      \"description\": \"Mass spectrometer\",\n      \"category\": \"goods\",\n      \"quantity\": \"2.00\",\n      \"unit_price\": \"150000.00\",\n      \"amount\": \"300000.00\"\n    }\n  ],\n  \"subtotal\": \"300000.00\",\n  \"tax\": \"30000.00\",\n  \"total\": \"330000.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"2626\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

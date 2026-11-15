@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "INV-AC-7850",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Acme Industrial Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40029",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "DESK-30",
+      "description": "Standing desks",
+      "category": "goods",
+      "quantity": "30.00",
+      "unit_price": "1000.00",
+      "amount": "30000.00"
+    }
+  ],
+  "subtotal": "30000.00",
+  "tax": "3000.00",
+  "total": "33000.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "4410",
+    "bank_country": "AU"
+  }
+}

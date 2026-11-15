@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-004",
+  "invoice_ref": "DFS-0912",
+  "vendor_id": "V-1004",
+  "amount": "12100.00",
+  "currency": "AUD",
+  "po_ref": "PO-40004",
+  "attachments": [
+    {
+      "filename": "DFS-0912.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Delta Facility Services Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: DFS-0912\nInvoice Date: 2026-11-03\nPO Number: PO-40004\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | HVAC-SVC | HVAC filters | goods | 50.00 | 200.00 | 10000.00\n2 | INST | Installation kit | goods | 1.00 | 1000.00 | 1000.00\n\nSubtotal: 11000.00\nGST (10%): 1100.00\nTotal Due: AUD 12100.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 7781\nGoods delivered to Site 3 on 2026-11-03. Signed: driver.",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

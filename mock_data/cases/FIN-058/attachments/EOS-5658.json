@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "EOS-5658",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Evergreen Office Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40058",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "CHAIR2",
+      "description": "Chairs",
+      "category": "goods",
+      "quantity": "4.00",
+      "unit_price": "250.00",
+      "amount": "1000.00"
+    }
+  ],
+  "subtotal": "1000.00",
+  "tax": "100.00",
+  "total": "1100.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "3090",
+    "bank_country": "AU"
+  }
+}

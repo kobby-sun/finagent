@@ -1,0 +1,23 @@
+{
+  "case_id": "FIN-071",
+  "invoice_ref": "CPC-7100",
+  "vendor_id": "V-1003",
+  "amount": "660.00",
+  "currency": "AUD",
+  "po_ref": "PO-40071",
+  "attachments": [
+    {
+      "filename": "CPC-7100.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"CPC-7100\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Coastal Packaging Co Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40071\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"CTN-L\",\n      \"description\": \"Shipping cartons, large\",\n      \"category\": \"goods\",\n      \"quantity\": \"100.00\",\n      \"unit_price\": \"6.00\",\n      \"amount\": \"600.00\"\n    }\n  ],\n  \"subtotal\": \"600.00\",\n  \"tax\": \"60.00\",\n  \"total\": \"660.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"1234\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    },
+    {
+      "filename": "dock_note_PO-40071.txt",
+      "content_type": "text/plain",
+      "content": "Dock note: only 60 of 100 cartons arrived on 3 Nov; the rest are on back-order.",
+      "source": "internal"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

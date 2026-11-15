@@ -1,0 +1,13 @@
+{
+  "index_version": "4141a18676d4b345",
+  "train_rows": 1146,
+  "valid_rows": 149,
+  "unique_train_queries": 385,
+  "test_questions": 59,
+  "authoritative_chunks": 55,
+  "sources": [
+    "heading_template",
+    "inverse_cloze",
+    "skill_query"
+  ]
+}

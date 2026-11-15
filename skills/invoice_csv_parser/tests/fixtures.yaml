@@ -1,0 +1,33 @@
+# Fixtures for skill 'invoice_csv_parser'. Run: finagent skills test invoice_csv_parser
+skill: invoice_csv_parser
+fixtures:
+- id: csv-invoice
+  input:
+    file: mock_data/cases/FIN-005/attachments/EOS-5512.csv
+    content_type: text/csv
+  expect:
+    doc_kind: invoice
+    invoice_number: EOS-5512
+    total: '3300.00'
+    lines: 1
+    parser: invoice_csv_parser
+- id: csv-freight
+  input:
+    file: mock_data/cases/FIN-026/attachments/INV-AC-7840.csv
+    content_type: text/csv
+  expect:
+    lines: 2
+    total: '3476.00'
+    tax: '316.00'
+- id: csv-missing-header
+  input:
+    content: 'line_no,sku,description,category,quantity,unit_price,amount
+
+      1,A,B,goods,1,10.00,10.00
+
+      '
+    filename: x.csv
+    content_type: text/csv
+  expect:
+    lines: 1
+    warnings_contain: invoice number missing

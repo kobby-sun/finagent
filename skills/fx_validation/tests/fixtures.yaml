@@ -1,0 +1,41 @@
+# Fixtures for skill 'fx_validation'. Run: finagent skills test fx_validation
+skill: fx_validation
+fixtures:
+- id: fx-aud
+  case: FIN-001
+  description: AUD invoice needs no conversion
+  expect:
+    votes: []
+    exceptions: []
+    data:
+      amount_aud: '18150.00'
+- id: fx-usd
+  case: FIN-013
+  description: USD 10,000 x 1.5200 = AUD 15,200.00
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      fx_rate: PASS
+    data:
+      amount_aud: '15200.00'
+- id: fx-usd-invoice-on-aud-po
+  case: FIN-014
+  description: USD 3,300 x 1.5200 = AUD 5,016.00 (authority only)
+  expect:
+    votes: []
+    data:
+      amount_aud: '5016.00'
+- id: fx-rate-missing
+  case: FIN-013
+  description: No corporate rate => hold (never invent a rate)
+  patch:
+    evidence.fx: null
+    evidence.errors.fx: 'ToolError: no corporate rate'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - AUTHORITY_GAP
+    findings:
+      fx_rate: UNKNOWN

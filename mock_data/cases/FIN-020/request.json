@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-020",
+  "invoice_ref": "EOS-5590",
+  "vendor_id": "V-1005",
+  "amount": "2750.00",
+  "currency": "AUD",
+  "po_ref": "PO-40020",
+  "attachments": [
+    {
+      "filename": "EOS-5590.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"EOS-5590\",\n  \"invoice_date\": \"2026-11-08\",\n  \"vendor_name\": \"Evergreen Office Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40020\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"PEN-BOX\",\n      \"description\": \"Ballpoint pens (box)\",\n      \"category\": \"goods\",\n      \"quantity\": \"50.00\",\n      \"unit_price\": \"50.00\",\n      \"amount\": \"2500.00\"\n    }\n  ],\n  \"subtotal\": \"2500.00\",\n  \"tax\": \"250.00\",\n  \"total\": \"2750.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"3090\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

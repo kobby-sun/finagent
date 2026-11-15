@@ -1,0 +1,69 @@
+# Fixtures for skill 'evidence_completeness'. Run: finagent skills test evidence_completeness
+skill: evidence_completeness
+fixtures:
+- id: ec-valid
+  description: Complete JSON invoice consistent with the request
+  case: FIN-001
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      evidence: PASS
+      consistency: PASS
+    calculations:
+      request_vs_document_amount: true
+- id: ec-header-mismatch
+  description: Request amount 9,990 vs document 9,900
+  case: FIN-023
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      consistency: FAIL
+    calculations:
+      request_vs_document_amount: false
+- id: ec-no-document
+  description: Header-only request; no invoice attached
+  case: FIN-041
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      evidence: FAIL
+    unknowns_min: 1
+- id: ec-wrong-entity
+  description: Invoice billed to a non-Northstar entity
+  case: FIN-033
+  expect:
+    votes:
+    - REJECT_INVALID
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      legal_entity: FAIL
+- id: ec-no-po-no-justification
+  description: No PO and no non-PO justification
+  case: FIN-038
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - MISSING_PO
+    findings:
+      po_reference: FAIL
+- id: ec-missing-tax
+  description: Tax field missing on an invoice
+  case: FIN-001
+  patch:
+    invoice.tax: null
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      evidence: FAIL

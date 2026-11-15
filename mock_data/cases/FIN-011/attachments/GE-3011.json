@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "GE-3011",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Granite Engineering Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40011",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "PUMP-2",
+      "description": "Transfer pump",
+      "category": "goods",
+      "quantity": "2.00",
+      "unit_price": "1500.00",
+      "amount": "3000.00"
+    }
+  ],
+  "subtotal": "3000.00",
+  "tax": "300.00",
+  "total": "3300.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "9905",
+    "bank_country": "AU"
+  }
+}

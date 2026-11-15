@@ -1,0 +1,76 @@
+{
+  "case_id": "FIN-063",
+  "invoice_ref": "X-3",
+  "vendor_id": "V-1001",
+  "amount": "100.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "f0.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f1.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f2.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f3.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f4.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f5.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f6.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f7.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f8.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f9.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    },
+    {
+      "filename": "f10.txt",
+      "content_type": "text/plain",
+      "content": "x",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

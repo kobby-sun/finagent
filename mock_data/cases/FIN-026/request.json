@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-026",
+  "invoice_ref": "INV-AC-7840",
+  "vendor_id": "V-1001",
+  "amount": "3476.00",
+  "currency": "AUD",
+  "po_ref": "PO-40026",
+  "attachments": [
+    {
+      "filename": "INV-AC-7840.csv",
+      "content_type": "text/csv",
+      "content": "# invoice_number=INV-AC-7840\n# invoice_date=2026-11-06\n# vendor_name=Acme Industrial Supplies Pty Ltd\n# bill_to=Northstar Group Pty Ltd\n# currency=AUD\n# po_ref=PO-40026\n# subtotal=3160.00\n# tax=316.00\n# total=3476.00\nline_no,sku,description,category,quantity,unit_price,amount\n1,CHAIR-10,Ergonomic chairs,goods,10.00,300.00,3000.00\n2,FRT,Freight,freight,1.00,160.00,160.00\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

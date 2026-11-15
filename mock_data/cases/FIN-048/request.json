@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-048",
+  "invoice_ref": "BWL-2300",
+  "vendor_id": "V-1002",
+  "amount": "2200.00",
+  "currency": "AUD",
+  "po_ref": "PO-40048",
+  "attachments": [
+    {
+      "filename": "BWL-2300.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Brightwave Logistics Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: BWL-2300\nInvoice Date: 2026-11-09\nPO Number: PO-40048\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | TAPE2 | Packing tape | goods | 20.00 | 100.00 | 2000.00\n\nSubtotal: 2000.00\nGST (10%): 250.00\nTotal Due: AUD 2250.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 5521\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

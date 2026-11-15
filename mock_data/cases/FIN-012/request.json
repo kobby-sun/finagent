@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-012",
+  "invoice_ref": "HDS-0001",
+  "vendor_id": "V-1008",
+  "amount": "8800.00",
+  "currency": "AUD",
+  "po_ref": "PO-40012",
+  "attachments": [
+    {
+      "filename": "HDS-0001.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"HDS-0001\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Harbour Digital Services Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40012\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"DEV-HRS\",\n      \"description\": \"Web development hours\",\n      \"category\": \"services\",\n      \"quantity\": \"40.00\",\n      \"unit_price\": \"200.00\",\n      \"amount\": \"8000.00\"\n    }\n  ],\n  \"subtotal\": \"8000.00\",\n  \"tax\": \"800.00\",\n  \"total\": \"8800.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"2207\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

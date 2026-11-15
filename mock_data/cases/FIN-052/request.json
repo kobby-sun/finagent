@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-052",
+  "invoice_ref": "INV-AC-7952",
+  "vendor_id": "V-1001",
+  "amount": "825.00",
+  "currency": "AUD",
+  "po_ref": "PO-40052",
+  "attachments": [
+    {
+      "filename": "INV-AC-7952.csv",
+      "content_type": "text/csv",
+      "content": "# invoice_number=INV-AC-7952\n# invoice_date=2026-11-07\n# vendor_name=Acme Industrial Supplies Pty Ltd\n# bill_to=Northstar Group Pty Ltd\n# currency=AUD\n# po_ref=PO-40052\n# subtotal=750.00\n# tax=75.00\n# total=825.00\nline_no,sku,description,category,quantity,unit_price,amount\n1,BOLT2,Bolts,goods,100.00,5.00,500.00\n2,NUT,Nuts,goods,200.00,1.00,200.00\n3,FRT,Freight,freight,1.00,50.00,50.00\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

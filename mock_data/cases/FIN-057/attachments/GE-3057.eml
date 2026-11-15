@@ -1,0 +1,22 @@
+From: Accounts <ap@granite-pay.example>
+To: ap@northstar.example
+Subject: Invoice GE-3057 - please pay immediately
+Date: Tue, 10 Nov 2026 08:00:00 +1100
+Content-Type: text/plain; charset=utf-8
+
+TAX INVOICE
+Supplier: Granite Engineering Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: GE-3057
+Invoice Date: 2026-11-10
+PO Number: PO-40057
+Currency: AUD
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | VALVE | Valves | goods | 10.00 | 120.00 | 1200.00
+
+Subtotal: 1200.00
+GST (10%): 120.00
+Total Due: AUD 1320.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 9905

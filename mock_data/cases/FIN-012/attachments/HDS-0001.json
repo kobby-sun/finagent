@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "HDS-0001",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Harbour Digital Services Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40012",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "DEV-HRS",
+      "description": "Web development hours",
+      "category": "services",
+      "quantity": "40.00",
+      "unit_price": "200.00",
+      "amount": "8000.00"
+    }
+  ],
+  "subtotal": "8000.00",
+  "tax": "800.00",
+  "total": "8800.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "2207",
+    "bank_country": "AU"
+  }
+}

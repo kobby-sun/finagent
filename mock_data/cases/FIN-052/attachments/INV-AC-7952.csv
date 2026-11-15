@@ -1,0 +1,13 @@
+# invoice_number=INV-AC-7952
+# invoice_date=2026-11-07
+# vendor_name=Acme Industrial Supplies Pty Ltd
+# bill_to=Northstar Group Pty Ltd
+# currency=AUD
+# po_ref=PO-40052
+# subtotal=750.00
+# tax=75.00
+# total=825.00
+line_no,sku,description,category,quantity,unit_price,amount
+1,BOLT2,Bolts,goods,100.00,5.00,500.00
+2,NUT,Nuts,goods,200.00,1.00,200.00
+3,FRT,Freight,freight,1.00,50.00,50.00

@@ -1,0 +1,18 @@
+{
+  "case_id": "FIN-002",
+  "invoice_ref": "BWL-2201",
+  "vendor_id": "V-1002",
+  "amount": "4620.00",
+  "currency": "AUD",
+  "po_ref": "PO-40002",
+  "notes": "Supplier re-sent invoice asking for payment status.",
+  "attachments": [
+    {
+      "filename": "BWL-2201.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Brightwave Logistics Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: BWL-2201\nInvoice Date: 2026-10-02\nPO Number: PO-40002\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | PAL-100 | Pallet wrap rolls | goods | 120.00 | 35.00 | 4200.00\n\nSubtotal: 4200.00\nGST (10%): 420.00\nTotal Due: AUD 4620.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 5521\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

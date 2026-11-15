@@ -1,0 +1,18 @@
+TAX INVOICE
+Supplier: Northern Power and Water Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: NPW-Q4-2026
+Invoice Date: 2026-11-02
+PO Number: (none)
+Currency: AUD
+Non-PO Category: utilities
+Justification: Quarterly electricity under approved utility account UA-4
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | ELEC-Q4 | Electricity Site 4 (Aug-Oct) | services | 1.00 | 3500.00 | 3500.00
+
+Subtotal: 3500.00
+GST (10%): 350.00
+Total Due: AUD 3850.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 7300

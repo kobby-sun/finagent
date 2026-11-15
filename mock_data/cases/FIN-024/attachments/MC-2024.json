@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "MC-2024",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Meridian Consulting Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40024",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "ADV-HRS",
+      "description": "Advisory hours",
+      "category": "services",
+      "quantity": "100.00",
+      "unit_price": "200.00",
+      "amount": "20000.00"
+    }
+  ],
+  "subtotal": "20000.00",
+  "tax": "2000.00",
+  "total": "22000.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "6060",
+    "bank_country": "AU"
+  }
+}

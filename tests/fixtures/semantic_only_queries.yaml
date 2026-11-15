@@ -1,0 +1,58 @@
+# Retrieval cases ONLY the embedding model can solve (tests/unit/test_semantic_only.py).
+#
+# semantic_only: plain-language paraphrases sharing no meaningful words with their target section (or its title / tags).
+#   Measured 2026-11-14: keyword search (BM25) does NOT rank the target in its top 5; the configured hybrid search
+#   (fine-tuned bge-small, fusion lexical 1.0 / vector 4.0) ranks it in the top 5. None of these queries is in the
+#   training pairs or the held-out natural_questions.yaml (max word overlap with any training query: 0.30).
+#   Measured with top_k = 5 (as in a run). Two rank-5 candidates were dropped: in a top-5 search the retriever shows
+#   one labelled non-authoritative chunk as risk evidence, which displaces rank 5 - too borderline to be a stable test.
+# known_gaps: the embedding model alone ranks the target in its top 4, but hybrid fusion pushes it below 5.
+#   Kept as strict expected failures: if a retrain or a fusion change fixes one, the test turns red so it is promoted.
+semantic_only:
+- query: what must our files show so an auditor can reconstruct what happened later
+  expect: FIN-POL-001#s6
+- query: should the AI do the sums or should a calculator
+  expect: FIN-POL-002#s5
+- query: brand new seller wants to be paid abroad, how many people must sign
+  expect: FIN-POL-003#s3
+- query: is the bot allowed to edit where we send money
+  expect: FIN-POL-004#s3
+- query: warning signs that a bill is a scam
+  expect: FIN-POL-005#s3
+- query: can a scam likelihood number alone brand someone a crook
+  expect: FIN-POL-005#s4
+- query: which weekdays does money normally leave our account
+  expect: FIN-POL-006#s2
+- query: seller threatens extra charges unless we pay today
+  expect: FIN-POL-006#s3
+- query: how quickly must problems be looked at and when does a stuck item go up the chain
+  expect: FIN-POL-007#s4
+- query: we paid a seller too much by mistake
+  expect: FIN-POL-008#s3
+- query: cancelling a small balance we will never get back, who signs
+  expect: FIN-POL-008#s5
+- query: seller switched from dollars to euros on the bill
+  expect: FIN-POL-009#s1
+- query: sending money to an account in another country
+  expect: FIN-POL-009#s4
+- query: how long must we keep old paperwork
+  expect: FIN-POL-010#s1
+- query: a lawsuit is pending, can we still purge old files
+  expect: FIN-POL-010#s5
+- query: what counts as a genuine crisis that lets us skip buying steps
+  expect: FIN-POL-012#s2
+- query: list of things to verify before signing off any bill
+  expect: FIN-POL-001#s5
+known_gaps:
+- query: how long after a bill arrives do we normally wait before settling it
+  expect: FIN-POL-006#s1
+  measured: vector rank 1, hybrid rank 6
+- query: paying a bill that had no order raised in advance
+  expect: FIN-POL-012#s1
+  measured: vector rank 1, hybrid rank 7
+- query: the missing paperwork turned up later, do we start over from scratch
+  expect: FIN-POL-007#s5
+  measured: vector rank 3, hybrid rank 7
+- query: chopping one big spend into several small ones to dodge sign-off limits
+  expect: FIN-POL-003#s1
+  measured: vector rank 4, hybrid rank 6

@@ -1,0 +1,68 @@
+# Fixtures for skill 'fraud_indicator_scoring'. Run: finagent skills test fraud_indicator_scoring
+skill: fraud_indicator_scoring
+fixtures:
+- id: fr-clean
+  case: FIN-001
+  description: No indicators
+  expect:
+    votes: []
+    exceptions: []
+    data:
+      indicator_count: 0
+    findings:
+      fraud_indicators: PASS
+- id: fr-poisoned
+  case: FIN-003
+  description: Bypass + urgency + bank change + supplied contact + look-alike domain
+  expect:
+    votes:
+    - ESCALATE_CONTROL_REVIEW
+    exceptions:
+    - OTHER_CONTROL_RISK
+    data:
+      indicator_count: 5
+    findings:
+      fraud_indicators: FAIL
+- id: fr-single-indicator
+  case: FIN-001
+  description: Urgency alone stays below threshold
+  patch:
+    request.notes: Supplier asks us to pay urgently.
+  expect:
+    votes: []
+    data:
+      indicator_count: 1
+- id: fr-two-indicators
+  case: FIN-001
+  description: Urgency + bank change => escalate
+  patch:
+    request.notes: 'URGENT: our bank account has changed.'
+  expect:
+    votes:
+    - ESCALATE_CONTROL_REVIEW
+    exceptions:
+    - OTHER_CONTROL_RISK
+    data:
+      indicator_count: 2
+- id: fr-lookalike-domain
+  case: FIN-039
+  description: Look-alike sender domain + urgency
+  patch:
+    docs.0.email.from_domain: evergreen-0ffice.example
+    request.notes: Please pay immediately.
+  expect:
+    votes:
+    - ESCALATE_CONTROL_REVIEW
+    data:
+      indicator_count: 2
+- id: fr-vendor-name-mismatch
+  case: FIN-001
+  description: Invoice vendor name differs from master + urgency
+  patch:
+    invoice.vendor_name: Acme Global Trading LLC
+    request.notes: urgent
+  expect:
+    votes:
+    - ESCALATE_CONTROL_REVIEW
+    data:
+      indicator_count: 2

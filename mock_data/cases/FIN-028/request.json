@@ -1,0 +1,9 @@
+{
+  "case_id": "FIN-028",
+  "invoice_ref": "BAD-1",
+  "vendor_id": "V-1001",
+  "amount": "-50.00",
+  "currency": "aud",
+  "attachments": [],
+  "requester_id": "u-req-11"
+}

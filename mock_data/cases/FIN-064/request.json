@@ -1,0 +1,22 @@
+{
+  "case_id": "FIN-064",
+  "invoice_ref": "QL-6400",
+  "vendor_id": "V-1017",
+  "amount": "3135.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "QL-6400.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Quartz Labs Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: QL-6400\nInvoice Date: 2026-11-09\nPO Number: (none)\nCurrency: AUD\nNon-PO Category: emergency\nJustification: Our maintenance agreement with the previous provider lapsed at the end of October, so Quartz Labs covered the call-outs at short notice.\nEmergency Type: outage\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | CALLOUT | Equipment call-outs (3 visits) | services | 3.00 | 950.00 | 2850.00\n\nSubtotal: 2850.00\nGST (10%): 285.00\nTotal Due: AUD 3135.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 2626\n",
+      "source": "supplier"
+    },
+    {
+      "filename": "callout_log_QL-6400.txt",
+      "content_type": "text/plain",
+      "content": "Call-out log: 3 visits completed, signed by the site supervisor.",
+      "source": "internal"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

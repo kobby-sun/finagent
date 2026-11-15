@@ -1,0 +1,10 @@
+{
+  "case_id": "FIN-041",
+  "invoice_ref": "INV-AC-7890",
+  "vendor_id": "V-1001",
+  "amount": "1100.00",
+  "currency": "AUD",
+  "po_ref": "PO-40041",
+  "attachments": [],
+  "requester_id": "u-req-11"
+}

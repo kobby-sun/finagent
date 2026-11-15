@@ -1,0 +1,93 @@
+{
+  "$defs": {
+    "Outcome": {
+      "enum": [
+        "APPROVE_FOR_POSTING",
+        "HOLD_FOR_INFORMATION",
+        "REJECT_DUPLICATE",
+        "REJECT_INVALID",
+        "ESCALATE_CONTROL_REVIEW"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "description": "What the model is allowed to contribute: narrative + inferences.\n\nThe model never decides arithmetic or the authoritative outcome; its\nproposed outcome may only make the decision *more* conservative.",
+  "properties": {
+    "summary": {
+      "maxLength": 1500,
+      "minLength": 10,
+      "title": "Summary",
+      "type": "string"
+    },
+    "proposed_outcome": {
+      "$ref": "#/$defs/Outcome"
+    },
+    "rationale": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Rationale",
+      "type": "array"
+    },
+    "cited_source_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 30,
+      "minItems": 1,
+      "title": "Cited Source Ids",
+      "type": "array"
+    },
+    "inferences": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Inferences",
+      "type": "array"
+    },
+    "unknowns": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Unknowns",
+      "type": "array"
+    },
+    "risk_notes": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 10,
+      "title": "Risk Notes",
+      "type": "array"
+    },
+    "additional_queries": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 2,
+      "title": "Additional Queries",
+      "type": "array"
+    },
+    "confidence": {
+      "maximum": 1,
+      "minimum": 0,
+      "title": "Confidence",
+      "type": "number"
+    }
+  },
+  "required": [
+    "summary",
+    "proposed_outcome",
+    "rationale",
+    "cited_source_ids",
+    "confidence"
+  ],
+  "title": "ModelDraft",
+  "type": "object"
+}

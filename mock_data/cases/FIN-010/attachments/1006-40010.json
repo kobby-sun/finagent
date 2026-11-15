@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "1006-40010",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Falcon Metals Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40010",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "ITEM-1",
+      "description": "Supplies",
+      "category": "goods",
+      "quantity": "10.00",
+      "unit_price": "500.00",
+      "amount": "5000.00"
+    }
+  ],
+  "subtotal": "5000.00",
+  "tax": "500.00",
+  "total": "5500.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "6612",
+    "bank_country": "AU"
+  }
+}

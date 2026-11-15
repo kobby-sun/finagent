@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-009",
+  "invoice_ref": "EOS-00123",
+  "vendor_id": "V-1005",
+  "amount": "2205.01",
+  "currency": "AUD",
+  "po_ref": "PO-40009",
+  "attachments": [
+    {
+      "filename": "EOS-00123.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"EOS-00123\",\n  \"invoice_date\": \"2026-11-05\",\n  \"vendor_name\": \"Evergreen Office Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40009\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"TONER-X\",\n      \"description\": \"Toner cartridges\",\n      \"category\": \"goods\",\n      \"quantity\": \"1.00\",\n      \"unit_price\": \"2004.55\",\n      \"amount\": \"2004.55\"\n    }\n  ],\n  \"subtotal\": \"2004.55\",\n  \"tax\": \"200.46\",\n  \"total\": \"2205.01\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"3090\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "RS-4490",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Redwood Services Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40030",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "SIGN-5",
+      "description": "Safety signage",
+      "category": "goods",
+      "quantity": "5.00",
+      "unit_price": "300.00",
+      "amount": "1500.00"
+    }
+  ],
+  "subtotal": "1500.00",
+  "tax": "150.00",
+  "total": "1650.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "1818",
+    "bank_country": "AU"
+  }
+}

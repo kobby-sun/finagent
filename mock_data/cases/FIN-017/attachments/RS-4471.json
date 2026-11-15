@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "RS-4471",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Redwood Services Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40017",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "CONS-HRS",
+      "description": "Consulting hours",
+      "category": "services",
+      "quantity": "40.00",
+      "unit_price": "150.00",
+      "amount": "6080.00"
+    }
+  ],
+  "subtotal": "6080.00",
+  "tax": "608.00",
+  "total": "6688.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "1818",
+    "bank_country": "AU"
+  }
+}

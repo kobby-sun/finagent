@@ -1,0 +1,19 @@
+TAX INVOICE
+Supplier: Swift Couriers Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: SWC-1110
+Invoice Date: 2026-11-10
+PO Number: (none)
+Currency: AUD
+Non-PO Category: emergency
+Justification: Data-centre cooling failure; replacement parts couriered overnight
+Emergency Type: outage
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | CRIT-COUR | Critical spare parts courier | services | 1.00 | 800.00 | 800.00
+
+Subtotal: 800.00
+GST (10%): 80.00
+Total Due: AUD 880.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 9191

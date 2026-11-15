@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-034",
+  "invoice_ref": "PF-1100",
+  "vendor_id": "V-1016",
+  "amount": "4400.00",
+  "currency": "AUD",
+  "po_ref": "PO-40034",
+  "attachments": [
+    {
+      "filename": "PF-1100.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"PF-1100\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Pinnacle Freight Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40034\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"FRT-SVC\",\n      \"description\": \"Line-haul freight service\",\n      \"category\": \"services\",\n      \"quantity\": \"1.00\",\n      \"unit_price\": \"4000.00\",\n      \"amount\": \"4000.00\"\n    }\n  ],\n  \"subtotal\": \"4000.00\",\n  \"tax\": \"400.00\",\n  \"total\": \"4400.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"8484\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

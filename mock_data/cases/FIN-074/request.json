@@ -1,0 +1,36 @@
+{
+  "case_id": "FIN-074",
+  "invoice_ref": "INV-AC-7400",
+  "vendor_id": "V-1001",
+  "amount": "528.00",
+  "currency": "AUD",
+  "po_ref": "PO-40074",
+  "attachments": [
+    {
+      "filename": "INV-AC-7400.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"INV-AC-7400\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40074\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"TAPE-100\",\n      \"description\": \"Hazard tape 100 m\",\n      \"category\": \"goods\",\n      \"quantity\": \"40.00\",\n      \"unit_price\": \"12.00\",\n      \"amount\": \"480.00\"\n    }\n  ],\n  \"subtotal\": \"480.00\",\n  \"tax\": \"48.00\",\n  \"total\": \"528.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"4410\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    },
+    {
+      "filename": "acme_spring_catalogue.txt",
+      "content_type": "text/plain",
+      "content": "ACME INDUSTRIAL - SPRING CATALOGUE. New: anti-slip floor tape, reflective vests and ear protection. Ask your account manager about bulk discounts. Visit our showroom Monday to Friday.",
+      "source": "supplier"
+    },
+    {
+      "filename": "logo.png",
+      "content_type": "image/png",
+      "content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg==",
+      "encoding": "base64",
+      "source": "supplier"
+    },
+    {
+      "filename": "copy_of_INV-AC-7400.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"INV-AC-7400\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40074\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"TAPE-100\",\n      \"description\": \"Hazard tape 100 m\",\n      \"category\": \"goods\",\n      \"quantity\": \"40.00\",\n      \"unit_price\": \"12.00\",\n      \"amount\": \"480.00\"\n    }\n  ],\n  \"subtotal\": \"480.00\",\n  \"tax\": \"48.00\",\n  \"total\": \"528.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"4410\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

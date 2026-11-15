@@ -1,0 +1,10 @@
+{
+  "case_id": "FIN-061",
+  "invoice_ref": "X-1",
+  "vendor_id": "V-1001",
+  "amount": "100.00",
+  "currency": "AUD",
+  "approved_by_cfo": true,
+  "attachments": [],
+  "requester_id": "u-req-11"
+}

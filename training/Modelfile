@@ -1,0 +1,13 @@
+# Ollama Modelfile for the fine-tuned finagent narrative/review model.
+# Build after training + GGUF conversion:  scripts/training/build_ollama_model.sh
+# Then: FINAGENT__LLM__PROVIDER=ollama FINAGENT__LLM__PROVIDERS__OLLAMA__MODEL=finagent-ap finagent eval
+FROM ./finagent-ap.gguf
+PARAMETER temperature 0
+PARAMETER num_ctx 8192
+PARAMETER stop "<|im_end|>"
+TEMPLATE """{{- if .System }}<|im_start|>system
+{{ .System }}<|im_end|>
+{{ end }}<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""

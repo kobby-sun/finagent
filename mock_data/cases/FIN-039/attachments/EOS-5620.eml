@@ -1,0 +1,23 @@
+From: Accounts <accounts@evergreen-office.example>
+To: ap@northstar.example
+Subject: Invoice EOS-5620
+Date: Mon, 09 Nov 2026 09:12:00 +1100
+Content-Type: text/plain; charset=utf-8
+
+TAX INVOICE
+Supplier: Evergreen Office Supplies Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: EOS-5620
+Invoice Date: 2026-11-09
+PO Number: PO-40039
+Currency: AUD
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | ENV-500 | Envelopes (box of 500) | goods | 500.00 | 2.00 | 1000.00
+
+Subtotal: 1000.00
+GST (10%): 100.00
+Total Due: AUD 1100.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 3090
+

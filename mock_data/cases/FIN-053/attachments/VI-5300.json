@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "VI-5300",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Vertex Imports Inc",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "USD",
+  "po_ref": "PO-40053",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "PART-X",
+      "description": "Imported parts",
+      "category": "goods",
+      "quantity": "5.00",
+      "unit_price": "400.00",
+      "amount": "2000.00"
+    }
+  ],
+  "subtotal": "2000.00",
+  "tax": "0.00",
+  "total": "2000.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "2323",
+    "bank_country": "US"
+  }
+}

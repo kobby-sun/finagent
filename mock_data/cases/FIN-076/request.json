@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-076",
+  "invoice_ref": "CPC-7600",
+  "vendor_id": "V-1003",
+  "amount": "528.00",
+  "currency": "AUD",
+  "po_ref": "PO-40076",
+  "attachments": [
+    {
+      "filename": "CPC-7600.txt",
+      "content_type": "text/plain",
+      "content": "T4X lNV0lCE  -  0riginal\nSupplier: Coastal Packaging Co Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: CPC-7600\nInvoice Date: 2026-11-09\nPO Number: PO-40076\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | BOX-M | Packing boxes, rnedium | goods | 200.00 | 2.40 | 480.00\n\nSubtotal: 480.00\nGST (10%): 48.00\nTotal Due: AUD 528.00\nPaym ent t erms: 30 days from invoice date\nRern it to: account ending 1234\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

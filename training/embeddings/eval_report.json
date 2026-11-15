@@ -1,0 +1,27 @@
+{
+  "lexical (BM25)": {
+    "hybrid": {
+      "questions": 58,
+      "recall@1": 0.466,
+      "recall@5": 0.707,
+      "mrr@10": 0.561,
+      "non_auth_top1": 0
+    }
+  },
+  "hash": {
+    "dense": {
+      "questions": 58,
+      "recall@1": 0.224,
+      "recall@5": 0.414,
+      "mrr@10": 0.308,
+      "non_auth_top1": 4
+    },
+    "hybrid": {
+      "questions": 58,
+      "recall@1": 0.276,
+      "recall@5": 0.534,
+      "mrr@10": 0.385,
+      "non_auth_top1": 0
+    }
+  }
+}

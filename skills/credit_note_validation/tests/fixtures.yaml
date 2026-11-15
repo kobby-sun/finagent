@@ -1,0 +1,56 @@
+# Fixtures for skill 'credit_note_validation'. Run: finagent skills test credit_note_validation
+skill: credit_note_validation
+fixtures:
+- id: cn-valid
+  case: FIN-019
+  description: Credit note against PAID INV-AC-7700
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      credit_note_reference: PASS
+    calculations:
+      credit_vs_original: true
+      credit_note_tax: true
+- id: cn-original-not-found
+  case: FIN-019
+  description: Original invoice not in history
+  patch:
+    evidence.original_invoice_records: []
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      credit_note_reference: FAIL
+- id: cn-exceeds-original
+  case: FIN-019
+  description: Credit larger than the original
+  patch:
+    invoice.total: '20000.00'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - OTHER_CONTROL_RISK
+    calculations:
+      credit_vs_original: false
+- id: cn-tax-query
+  case: FIN-019
+  description: Credit tax not 10% of subtotal
+  patch:
+    invoice.tax: '200.00'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - TAX_QUERY
+    calculations:
+      credit_note_tax: false
+- id: cn-not-a-credit-note
+  case: FIN-001
+  description: Ordinary invoice is ignored
+  expect:
+    votes: []
+    exceptions: []

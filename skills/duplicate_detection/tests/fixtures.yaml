@@ -1,0 +1,51 @@
+# Fixtures for skill 'duplicate_detection'. Run: finagent skills test duplicate_detection
+skill: duplicate_detection
+fixtures:
+- id: dd-no-match
+  case: FIN-001
+  description: No history match
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      duplicate: PASS
+- id: dd-exact-paid
+  case: FIN-002
+  description: Exact match to PAID H-9001
+  expect:
+    votes:
+    - REJECT_DUPLICATE
+    exceptions:
+    - DUPLICATE_RISK
+    findings:
+      duplicate: FAIL
+- id: dd-fuzzy-posted
+  case: FIN-009
+  description: Punctuation/zero-stripped number, amount within 0.5%
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - DUPLICATE_RISK
+- id: dd-prior-rejected
+  case: FIN-031
+  description: Prior REJECTED record is reviewed, not auto-rejected
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - DUPLICATE_RISK
+- id: dd-history-down
+  case: FIN-001
+  description: History service unavailable => hold, never assume no duplicate
+  patch:
+    evidence.history: null
+    evidence.errors.history: 'ToolTimeout: simulated'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - DUPLICATE_RISK
+    findings:
+      duplicate: UNKNOWN
+    unknowns_min: 1

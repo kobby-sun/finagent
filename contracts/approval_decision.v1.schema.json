@@ -1,0 +1,53 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "APPROVE",
+        "REJECT"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "approver_id": {
+      "maxLength": 64,
+      "minLength": 2,
+      "title": "Approver Id",
+      "type": "string"
+    },
+    "comment": {
+      "anyOf": [
+        {
+          "maxLength": 2000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Reason for the decision. REQUIRED for REJECT (recorded in the reasoning trace).",
+      "title": "Comment"
+    },
+    "callback_id": {
+      "anyOf": [
+        {
+          "maxLength": 128,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Idempotency key of the callback delivery; duplicates replay the stored response",
+      "title": "Callback Id"
+    }
+  },
+  "required": [
+    "decision",
+    "approver_id"
+  ],
+  "title": "ApprovalDecisionIn",
+  "type": "object"
+}

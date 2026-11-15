@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-014",
+  "invoice_ref": "INV-AC-7820",
+  "vendor_id": "V-1001",
+  "amount": "3300.00",
+  "currency": "USD",
+  "po_ref": "PO-40014",
+  "attachments": [
+    {
+      "filename": "INV-AC-7820.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"INV-AC-7820\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"USD\",\n  \"po_ref\": \"PO-40014\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"LAMP-20\",\n      \"description\": \"LED work lamps\",\n      \"category\": \"goods\",\n      \"quantity\": \"20.00\",\n      \"unit_price\": \"150.00\",\n      \"amount\": \"3000.00\"\n    }\n  ],\n  \"subtotal\": \"3000.00\",\n  \"tax\": \"300.00\",\n  \"total\": \"3300.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"4410\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

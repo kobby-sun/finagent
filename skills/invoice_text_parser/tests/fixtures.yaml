@@ -1,0 +1,37 @@
+# Fixtures for skill 'invoice_text_parser'. Run: finagent skills test invoice_text_parser
+skill: invoice_text_parser
+fixtures:
+- id: text-invoice
+  input:
+    file: mock_data/cases/FIN-002/attachments/BWL-2201.txt
+  expect:
+    doc_kind: invoice
+    invoice_number: BWL-2201
+    total: '4620.00'
+    tax: '420.00'
+    subtotal: '4200.00'
+    lines: 1
+    po_ref: PO-40002
+    bank_last4: '5521'
+- id: text-non-po
+  input:
+    file: mock_data/cases/FIN-015/attachments/NPW-Q4-2026.txt
+  expect:
+    invoice_number: NPW-Q4-2026
+    po_ref: null
+    total: '3850.00'
+- id: text-supporting-note
+  input:
+    file: mock_data/cases/FIN-015/attachments/meter_reading_confirmation.txt
+    source: internal
+  expect:
+    doc_kind: supporting
+    attachment_source: internal
+- id: text-unknown-extension
+  input:
+    content: Random memo with no invoice fields
+    filename: memo.xyz
+    content_type: application/octet-stream
+  expect:
+    doc_kind: supporting
+    parser: invoice_text_parser

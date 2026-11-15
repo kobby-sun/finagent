@@ -1,0 +1,22 @@
+# syntax=docker/dockerfile:1
+# Local training image (CPU): embedding fine-tuning + dataset generation.
+#   docker compose --profile train run --rm embed-train        # ingest -> pairs -> fine-tune -> held-out eval
+FROM python:3.13-slim
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1 HF_HOME=/hf-cache TOKENIZERS_PARALLELISM=false
+WORKDIR /app
+COPY requirements.lock pyproject.toml ./
+RUN pip install -r requirements.lock \
+ && pip install --index-url https://download.pytorch.org/whl/cpu "torch==2.9.*" \
+ && pip install "sentence-transformers==5.1.*" "datasets==4.*"
+RUN pip install "accelerate>=1.0,<2"
+COPY src ./src
+COPY config ./config
+COPY finance_rag_corpus ./finance_rag_corpus
+COPY mock_data ./mock_data
+COPY skills ./skills
+COPY plugins ./plugins
+COPY scripts ./scripts
+COPY training/Modelfile ./training/Modelfile
+RUN pip install --no-deps -e .
+ENV FINAGENT__APP__DATA_DIR=/data
+ENTRYPOINT ["bash", "scripts/training/docker_embed_pipeline.sh"]

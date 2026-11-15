@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-053",
+  "invoice_ref": "VI-5300",
+  "vendor_id": "V-1023",
+  "amount": "2000.00",
+  "currency": "USD",
+  "po_ref": "PO-40053",
+  "attachments": [
+    {
+      "filename": "VI-5300.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"VI-5300\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Vertex Imports Inc\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"USD\",\n  \"po_ref\": \"PO-40053\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"PART-X\",\n      \"description\": \"Imported parts\",\n      \"category\": \"goods\",\n      \"quantity\": \"5.00\",\n      \"unit_price\": \"400.00\",\n      \"amount\": \"2000.00\"\n    }\n  ],\n  \"subtotal\": \"2000.00\",\n  \"tax\": \"0.00\",\n  \"total\": \"2000.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"2323\",\n    \"bank_country\": \"US\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

@@ -1,0 +1,8 @@
+# cp terraform.tfvars.example terraform.tfvars   (terraform.tfvars is git-ignored)
+project       = "finagent"
+environment   = "poc"
+region        = "ap-southeast-2"
+allowed_cidrs = ["203.0.113.10/32"] # your office / VPN egress IP
+llm_provider  = "bedrock"           # or "mock" for a zero-model-cost demo
+image_tag     = "v0.1.0"
+# acm_certificate_arn = "arn:aws:acm:ap-southeast-2:123456789012:certificate/..."

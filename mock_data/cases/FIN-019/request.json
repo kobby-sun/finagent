@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-019",
+  "invoice_ref": "CN-AC-0042",
+  "vendor_id": "V-1001",
+  "amount": "1650.00",
+  "currency": "AUD",
+  "document_type": "credit_note",
+  "attachments": [
+    {
+      "filename": "CN-AC-0042.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"credit_note\",\n  \"invoice_number\": \"CN-AC-0042\",\n  \"invoice_date\": \"2026-11-07\",\n  \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"original_invoice_ref\": \"INV-AC-7700\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"RET-HLM\",\n      \"description\": \"Returned damaged helmets\",\n      \"category\": \"goods\",\n      \"quantity\": \"1\",\n      \"unit_price\": \"1500.00\",\n      \"amount\": \"1500.00\"\n    }\n  ],\n  \"subtotal\": \"1500.00\",\n  \"tax\": \"150.00\",\n  \"total\": \"1650.00\"\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

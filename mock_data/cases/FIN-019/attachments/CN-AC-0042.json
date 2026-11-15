@@ -1,0 +1,23 @@
+{
+  "document_type": "credit_note",
+  "invoice_number": "CN-AC-0042",
+  "invoice_date": "2026-11-07",
+  "vendor_name": "Acme Industrial Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "original_invoice_ref": "INV-AC-7700",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "RET-HLM",
+      "description": "Returned damaged helmets",
+      "category": "goods",
+      "quantity": "1",
+      "unit_price": "1500.00",
+      "amount": "1500.00"
+    }
+  ],
+  "subtotal": "1500.00",
+  "tax": "150.00",
+  "total": "1650.00"
+}

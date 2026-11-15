@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-049",
+  "invoice_ref": "CN-AC-0099",
+  "vendor_id": "V-1001",
+  "amount": "550.00",
+  "currency": "AUD",
+  "document_type": "credit_note",
+  "attachments": [
+    {
+      "filename": "CN-AC-0099.json",
+      "content_type": "application/json",
+      "content": "{\"document_type\": \"credit_note\", \"invoice_number\": \"CN-AC-0099\", \"invoice_date\": \"2026-11-08\", \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\", \"bill_to\": \"Southpoint Holdings Pty Ltd\", \"currency\": \"AUD\", \"original_invoice_ref\": \"INV-AC-9999\", \"lines\": [{\"line_no\": 1, \"sku\": \"RET\", \"description\": \"Returned goods\", \"category\": \"goods\", \"quantity\": \"1\", \"unit_price\": \"500.00\", \"amount\": \"500.00\"}], \"subtotal\": \"500.00\", \"tax\": \"50.00\", \"total\": \"550.00\"}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-057",
+  "invoice_ref": "GE-3057",
+  "vendor_id": "V-1007",
+  "amount": "1320.00",
+  "currency": "AUD",
+  "po_ref": "PO-40057",
+  "attachments": [
+    {
+      "filename": "GE-3057.eml",
+      "content_type": "message/rfc822",
+      "content": "From: Accounts <ap@granite-pay.example>\nTo: ap@northstar.example\nSubject: Invoice GE-3057 - please pay immediately\nDate: Tue, 10 Nov 2026 08:00:00 +1100\nContent-Type: text/plain; charset=utf-8\n\nTAX INVOICE\nSupplier: Granite Engineering Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: GE-3057\nInvoice Date: 2026-11-10\nPO Number: PO-40057\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | VALVE | Valves | goods | 10.00 | 120.00 | 1200.00\n\nSubtotal: 1200.00\nGST (10%): 120.00\nTotal Due: AUD 1320.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 9905\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

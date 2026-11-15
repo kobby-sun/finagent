@@ -1,0 +1,22 @@
+{
+  "case_id": "FIN-050",
+  "invoice_ref": "OM-2400",
+  "vendor_id": "V-1015",
+  "amount": "13200.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "OM-2400.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Orbit Maintenance Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: OM-2400\nInvoice Date: 2026-11-10\nPO Number: (none)\nCurrency: AUD\nNon-PO Category: emergency\nJustification: Gas leak at Site 2 required immediate isolation and repair\nEmergency Type: safety\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | GAS-REP | Emergency gas leak isolation and repair | services | 1.00 | 12000.00 | 12000.00\n\nSubtotal: 12000.00\nGST (10%): 1200.00\nTotal Due: AUD 13200.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 5115\n",
+      "source": "supplier"
+    },
+    {
+      "filename": "incident_INC-3301.txt",
+      "content_type": "text/plain",
+      "content": "Incident INC-3301: gas leak, Site 2. Repair completed and verified by safety officer.",
+      "source": "internal"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

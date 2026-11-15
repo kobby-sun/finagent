@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "II-77001",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Ionic Instruments Inc",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "USD",
+  "po_ref": "PO-40013",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "SENS-10",
+      "description": "Precision sensors",
+      "category": "goods",
+      "quantity": "10.00",
+      "unit_price": "1000.00",
+      "amount": "10000.00"
+    }
+  ],
+  "subtotal": "10000.00",
+  "tax": "0.00",
+  "total": "10000.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "8150",
+    "bank_country": "US"
+  }
+}

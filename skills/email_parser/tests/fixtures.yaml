@@ -1,0 +1,35 @@
+# Fixtures for skill 'email_parser'. Run: finagent skills test email_parser
+skill: email_parser
+fixtures:
+- id: eml-invoice-body
+  input:
+    file: mock_data/cases/FIN-039/attachments/EOS-5620.eml
+    content_type: message/rfc822
+  expect:
+    doc_kind: invoice
+    invoice_number: EOS-5620
+    total: '1100.00'
+    email_domain: evergreen-office.example
+    parser: email_parser
+- id: eml-poisoned
+  input:
+    file: mock_data/cases/FIN-003/attachments/payment_update.eml
+    content_type: message/rfc822
+  expect:
+    doc_kind: email
+    bank_last4: '8842'
+    email_domain: coastal-packaging-payments.example
+- id: eml-sniffed-without-extension
+  input:
+    content: 'From: a <a@b.example>
+
+      Subject: hello
+
+
+      No invoice here.'
+    filename: message
+    content_type: application/octet-stream
+  expect:
+    parser: email_parser
+    doc_kind: email
+    email_domain: b.example

@@ -1,0 +1,31 @@
+# Fixtures for skill 'pdf_parser'. Run: finagent skills test pdf_parser
+skill: pdf_parser
+fixtures:
+- id: pdf-invoice
+  input:
+    file: mock_data/cases/FIN-042/attachments/RS-4510.pdf
+    content_type: application/pdf
+    encoding: base64
+  expect:
+    doc_kind: invoice
+    invoice_number: RS-4510
+    total: '3850.00'
+    lines: 1
+    parser: pdf_parser
+- id: pdf-sniffed
+  input:
+    file: mock_data/cases/FIN-042/attachments/RS-4510.pdf
+    content_type: application/octet-stream
+    encoding: base64
+  expect:
+    parser: pdf_parser
+    invoice_number: RS-4510
+- id: pdf-bad-base64
+  input:
+    content: '%%%not-base64%%%'
+    filename: x.pdf
+    content_type: application/pdf
+    encoding: base64
+  expect:
+    doc_kind: supporting
+    warnings_contain: base64

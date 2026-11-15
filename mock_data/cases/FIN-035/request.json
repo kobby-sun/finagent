@@ -1,0 +1,22 @@
+{
+  "case_id": "FIN-035",
+  "invoice_ref": "SWC-1110",
+  "vendor_id": "V-1019",
+  "amount": "880.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "SWC-1110.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Swift Couriers Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: SWC-1110\nInvoice Date: 2026-11-10\nPO Number: (none)\nCurrency: AUD\nNon-PO Category: emergency\nJustification: Data-centre cooling failure; replacement parts couriered overnight\nEmergency Type: outage\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | CRIT-COUR | Critical spare parts courier | services | 1.00 | 800.00 | 800.00\n\nSubtotal: 800.00\nGST (10%): 80.00\nTotal Due: AUD 880.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 9191\n",
+      "source": "supplier"
+    },
+    {
+      "filename": "ops_incident_INC-2231.txt",
+      "content_type": "text/plain",
+      "content": "Incident INC-2231 (critical service outage). Courier delivery received by on-call engineer.",
+      "source": "internal"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "EOS-7300",
+  "invoice_date": "2026-11-09",
+  "vendor_name": "Evergreen Office Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40073",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "PEN-BLK",
+      "description": "Ballpoint pens, black (box of 50)",
+      "category": "goods",
+      "quantity": "12.00",
+      "unit_price": "9.50",
+      "amount": "114.00"
+    }
+  ],
+  "subtotal": "114.00",
+  "tax": "11.40",
+  "total": "125.40",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "3090",
+    "bank_country": "AU"
+  }
+}

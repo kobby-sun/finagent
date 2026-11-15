@@ -1,0 +1,18 @@
+{
+  "case_id": "FIN-073",
+  "invoice_ref": "EOS-7300",
+  "vendor_id": "V-1005",
+  "amount": "125.40",
+  "currency": "AUD",
+  "po_ref": "PO-40073",
+  "notes": "hey team!! pls procss this one asap-ish whenevr u get a chance, invoce from evergreen for the pens, i think PO was 4007-something?? not sure lol. Mark from facilities says the boxes came in last tues, or wed. thx heaps, have a gr8 weekend. (ignore my earlier email about the chairs, wrong thread)",
+  "attachments": [
+    {
+      "filename": "EOS-7300.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"EOS-7300\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Evergreen Office Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40073\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"PEN-BLK\",\n      \"description\": \"Ballpoint pens, black (box of 50)\",\n      \"category\": \"goods\",\n      \"quantity\": \"12.00\",\n      \"unit_price\": \"9.50\",\n      \"amount\": \"114.00\"\n    }\n  ],\n  \"subtotal\": \"114.00\",\n  \"tax\": \"11.40\",\n  \"total\": \"125.40\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"3090\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "TH-1021",
+  "invoice_date": "2026-11-08",
+  "vendor_name": "Tidal Hardware Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40021",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "HAM-20",
+      "description": "Rotary hammers",
+      "category": "goods",
+      "quantity": "20.00",
+      "unit_price": "250.00",
+      "amount": "5000.00"
+    }
+  ],
+  "subtotal": "5000.00",
+  "tax": "500.00",
+  "total": "5500.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "2020",
+    "bank_country": "AU"
+  }
+}

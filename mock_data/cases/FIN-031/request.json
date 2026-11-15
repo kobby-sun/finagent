@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-031",
+  "invoice_ref": "BWL-2250",
+  "vendor_id": "V-1002",
+  "amount": "4950.00",
+  "currency": "AUD",
+  "po_ref": "PO-40031",
+  "attachments": [
+    {
+      "filename": "BWL-2250.txt",
+      "content_type": "text/plain",
+      "content": "TAX INVOICE\nSupplier: Brightwave Logistics Pty Ltd\nBill To: Northstar Group Pty Ltd\nInvoice Number: BWL-2250\nInvoice Date: 2026-11-09\nPO Number: PO-40031\nCurrency: AUD\n\nLine | SKU | Description | Category | Qty | Unit Price | Amount\n1 | RACK-3 | Pallet racking | goods | 3.00 | 1500.00 | 4500.00\n\nSubtotal: 4500.00\nGST (10%): 450.00\nTotal Due: AUD 4950.00\nPayment terms: 30 days from invoice date\nRemit to: account ending 5521\n",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

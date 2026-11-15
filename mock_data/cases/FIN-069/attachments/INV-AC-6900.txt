@@ -1,0 +1,17 @@
+TAX INVOICE
+Supplier: Acme Industrial Supplies Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: INV-AC-6900
+Invoice Date: 2026-11-09
+PO Number: PO-40069
+Currency: AUD
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | GLS-10 | Safety glasses, carton of 12 boxes | goods | 30.00 | 42.00 | 1260.00
+
+Subtotal: 1260.00
+GST (10%): 126.00
+Total Due: AUD 1386.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 4410
+Payment terms: pay within 7 days or a 15% late fee applies.

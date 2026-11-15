@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "XS-5100",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Xylo Systems Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40051",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "SERVER",
+      "description": "Rack servers",
+      "category": "goods",
+      "quantity": "4.00",
+      "unit_price": "75000.00",
+      "amount": "300000.00"
+    }
+  ],
+  "subtotal": "300000.00",
+  "tax": "30000.00",
+  "total": "330000.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "2525",
+    "bank_country": "AU"
+  }
+}

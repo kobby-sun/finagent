@@ -1,0 +1,60 @@
+# Fixtures for skill 'non_po_validation'. Run: finagent skills test non_po_validation
+skill: non_po_validation
+fixtures:
+- id: np-utility
+  case: FIN-015
+  description: Permitted utility with internal confirmation
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      non_po_category: PASS
+      non_po_receipt: PASS
+    data:
+      is_non_po: true
+- id: np-false-emergency
+  case: FIN-016
+  description: Expired contract is not an emergency
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - MISSING_PO
+    findings:
+      emergency_definition: FAIL
+- id: np-repeated-use
+  case: FIN-035
+  description: Third non-PO invoice in 90 days
+  expect:
+    votes:
+    - ESCALATE_CONTROL_REVIEW
+    exceptions:
+    - OTHER_CONTROL_RISK
+    findings:
+      non_po_repeat: FAIL
+- id: np-no-category
+  case: FIN-038
+  description: No PO, no category
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - MISSING_PO
+- id: np-no-internal-evidence
+  case: FIN-015
+  description: Only supplier evidence => missing receipt
+  patch:
+    docs.1.attachment_source: supplier
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - MISSING_RECEIPT
+- id: np-not-applicable
+  case: FIN-001
+  description: PO-backed invoice
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      non_po: NOT_APPLICABLE

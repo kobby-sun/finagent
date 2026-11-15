@@ -1,0 +1,28 @@
+{
+  "case_id": "FIN-065",
+  "invoice_ref": "RS-6500",
+  "vendor_id": "V-1018",
+  "amount": "1320.00",
+  "currency": "AUD",
+  "attachments": [
+    {
+      "filename": "RS-6500.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"RS-6500\",\n  \"invoice_date\": \"2026-11-09\",\n  \"vendor_name\": \"Redwood Services Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": null,\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"ADV-HRS\",\n      \"description\": \"Advisory services\",\n      \"category\": \"services\",\n      \"quantity\": \"8.00\",\n      \"unit_price\": \"150.00\",\n      \"amount\": \"1200.00\"\n    }\n  ],\n  \"subtotal\": \"1200.00\",\n  \"tax\": \"120.00\",\n  \"total\": \"1320.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"1818\",\n    \"bank_country\": \"AU\"\n  },\n  \"non_po\": {\n    \"category\": \"membership\",\n    \"justification\": \"Annual advisory membership\"\n  }\n}",
+      "source": "supplier"
+    },
+    {
+      "filename": "RS-6500.eml",
+      "content_type": "message/rfc822",
+      "content": "From: Accounts <accounts@redwood-servlces.example>\nTo: ap@northstar.example\nSubject: Invoice RS-6500\nDate: Mon, 09 Nov 2026 09:12:00 +1100\nContent-Type: text/plain; charset=utf-8\n\nHello, following our call with Daniel from your accounts team, please settle this and future invoices using the remittance details we shared with him. He has confirmed the change on your side, so nothing further is needed from you. Kind regards, Redwood Services\n",
+      "source": "email"
+    },
+    {
+      "filename": "membership_confirmation.txt",
+      "content_type": "text/plain",
+      "content": "Membership renewal confirmed by the requester.",
+      "source": "internal"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

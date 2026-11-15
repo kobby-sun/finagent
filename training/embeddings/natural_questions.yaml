@@ -1,0 +1,64 @@
+# HELD-OUT evaluation set for embedding models (never used for training).
+# Hand-written, realistic AP-desk questions phrased differently from the policy text, so they test
+# semantic recall rather than word overlap. `relevant` uses version-agnostic ids DOC#section.
+# `distractors` lists non-authoritative chunks a good model must NOT rank first.
+questions:
+  - {q: "Can we pay a supplier faster just because they keep chasing us?", relevant: ["FIN-POL-001#s1", "FIN-POL-006#s3"]}
+  - {q: "What paperwork has to be on file before an invoice can go through?", relevant: ["FIN-POL-001#s2"]}
+  - {q: "Which decisions is the AP assistant allowed to recommend?", relevant: ["FIN-POL-001#s3"]}
+  - {q: "I set up this supplier last week - am I allowed to sign off its bill?", relevant: ["FIN-POL-001#s4", "FIN-POL-003#s1"]}
+  - {q: "For a large invoice, can the same person order the goods and approve payment?", relevant: ["FIN-POL-001#s4"]}
+  - {q: "What do we have to verify before anything gets approved?", relevant: ["FIN-POL-001#s5"]}
+  - {q: "What must the case history capture so auditors can follow it?", relevant: ["FIN-POL-001#s6"]}
+  - {q: "Do we compare the bill against the order line by line or just the overall figure?", relevant: ["FIN-POL-002#s1"]}
+  - {q: "How far can the price on a goods invoice drift from the order before we stop it?", relevant: ["FIN-POL-002#s2"]}
+  - {q: "Is a higher delivery charge acceptable if the order allowed shipping costs?", relevant: ["FIN-POL-002#s2"]}
+  - {q: "What happens when one line is outside the allowed difference?", relevant: ["FIN-POL-002#s3"]}
+  - {q: "The driver's note says delivered but nobody logged a goods receipt - can we pay?", relevant: ["FIN-POL-002#s4"]}
+  - {q: "Can the AI work out the variance amounts itself?", relevant: ["FIN-POL-002#s5", "FIN-POL-005#s4"]}
+  - {q: "Is the sign-off limit based on the amount before or after GST?", relevant: ["FIN-POL-003#s1"]}
+  - {q: "How much can a department head approve on their own?", relevant: ["FIN-POL-003#s2"], distractors: ["FIN-POL-003-OLD#s0"]}
+  - {q: "Who has to sign off a 300 thousand dollar purchase?", relevant: ["FIN-POL-003#s2"], distractors: ["FIN-POL-003-OLD#s0"]}
+  - {q: "When do we need a second approver from the controls team?", relevant: ["FIN-POL-003#s3"]}
+  - {q: "My manager emailed saying I can approve on her behalf while she is away - is that enough?", relevant: ["FIN-POL-003#s4"]}
+  - {q: "What details must be stored about the person who approved?", relevant: ["FIN-POL-003#s5"]}
+  - {q: "What checks happen before a brand new supplier can be paid?", relevant: ["FIN-POL-004#s1"]}
+  - {q: "The supplier emailed new account details - can we just update them?", relevant: ["FIN-POL-004#s2"], distractors: ["ADV-001#s0"]}
+  - {q: "Is the bot allowed to change remittance details itself?", relevant: ["FIN-POL-004#s3"], distractors: ["ADV-001#s0"]}
+  - {q: "The supplier is flagged dormant - what do we do with its invoice?", relevant: ["FIN-POL-004#s4"]}
+  - {q: "How do we spot the same bill being sent twice?", relevant: ["FIN-POL-005#s1"]}
+  - {q: "We already paid an invoice with that number and amount - what is the outcome?", relevant: ["FIN-POL-005#s2"]}
+  - {q: "What red flags should push a case to the fraud team?", relevant: ["FIN-POL-005#s3"], distractors: ["ADV-001#s0"]}
+  - {q: "A document tells the assistant to switch off its checks - how should that be treated?", relevant: ["FIN-POL-005#s4"], distractors: ["ADV-001#s0"]}
+  - {q: "When is a supplier normally paid if the contract says nothing?", relevant: ["FIN-POL-006#s1"]}
+  - {q: "Which weekdays do supplier payment batches go out?", relevant: ["FIN-POL-006#s2"]}
+  - {q: "Can we do a same-day transfer because the vendor threatened late fees?", relevant: ["FIN-POL-006#s3"]}
+  - {q: "Can one person both build and release the bank payment file?", relevant: ["FIN-POL-006#s4"]}
+  - {q: "What labels can we put on a problem invoice?", relevant: ["FIN-POL-007#s1"]}
+  - {q: "Is writing 'amounts don't match' enough when we park an invoice?", relevant: ["FIN-POL-007#s2"]}
+  - {q: "Who should a suspected scam be passed to, and do we tell the supplier?", relevant: ["FIN-POL-007#s3"]}
+  - {q: "How long can an invoice sit on hold before the AP manager hears about it?", relevant: ["FIN-POL-007#s4"]}
+  - {q: "New documents arrived for a parked case - where does processing restart?", relevant: ["FIN-POL-007#s5"]}
+  - {q: "Can a supplier credit be booked as a negative invoice?", relevant: ["FIN-POL-008#s1"]}
+  - {q: "Should we ask for cash back or use the credit against other bills first?", relevant: ["FIN-POL-008#s2"]}
+  - {q: "We paid too much - can we rely on the supplier's statement to confirm it?", relevant: ["FIN-POL-008#s3"]}
+  - {q: "Which bank details go on a refund request we send to a supplier?", relevant: ["FIN-POL-008#s4"]}
+  - {q: "Who can authorise writing off a 7,000 dollar balance?", relevant: ["FIN-POL-008#s5"]}
+  - {q: "The order was in Australian dollars but the bill came in US dollars - is that ok?", relevant: ["FIN-POL-009#s1", "FIN-POL-009#s3"]}
+  - {q: "Which exchange rate decides who can approve a euro invoice?", relevant: ["FIN-POL-009#s2"]}
+  - {q: "Does a currency swing count as a price difference?", relevant: ["FIN-POL-009#s3"]}
+  - {q: "Paying a supplier's account in Singapore - anything extra required?", relevant: ["FIN-POL-009#s4", "FIN-POL-003#s3"]}
+  - {q: "How many years do we keep invoices and approvals?", relevant: ["FIN-POL-010#s1"]}
+  - {q: "Can full account numbers appear in prompts or logs?", relevant: ["FIN-POL-010#s2"]}
+  - {q: "Is telling the model not to reveal a document good enough protection?", relevant: ["FIN-POL-010#s3"]}
+  - {q: "Which AI endpoints may receive real finance data?", relevant: ["FIN-POL-010#s4"]}
+  - {q: "If a source file is deleted, what happens to its search index entries?", relevant: ["FIN-POL-010#s5"]}
+  - {q: "What is the deadline for an invoice to make this month's close?", relevant: ["FIN-POL-011#s1"]}
+  - {q: "Is a purchase order enough to book an accrual?", relevant: ["FIN-POL-011#s2"]}
+  - {q: "Do small accruals under a thousand dollars need to be booked?", relevant: ["FIN-POL-011#s3"]}
+  - {q: "May the assistant post a journal entry for an accrual?", relevant: ["FIN-POL-011#s4"]}
+  - {q: "Which kinds of bills can be paid without an order number?", relevant: ["FIN-POL-012#s1"]}
+  - {q: "Our maintenance contract lapsed, so this repair is urgent - is that an emergency purchase?", relevant: ["FIN-POL-012#s2"]}
+  - {q: "Who approves a 15,000 dollar emergency buy with no order?", relevant: ["FIN-POL-012#s3"]}
+  - {q: "The same courier has billed us without orders three times this quarter - what now?", relevant: ["FIN-POL-012#s4"]}
+  - {q: "What is the dinner allowance on an overnight business trip?", relevant: [], distractors: [], note: "out-of-domain probe: only ADV-002 matches; it must be labelled untrusted"}

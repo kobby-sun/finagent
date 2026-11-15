@@ -1,0 +1,53 @@
+{
+  "finished_at": "2026-11-14T14:42:40",
+  "ok": true,
+  "steps": [
+    {
+      "step": "1 validate workflow + plugins",
+      "status": "ok",
+      "duration": "0s"
+    },
+    {
+      "step": "1 skill fixtures (every skill incl. new ones)",
+      "status": "ok",
+      "duration": "2s"
+    },
+    {
+      "step": "2 rebuild policy index + vectors",
+      "status": "ok",
+      "duration": "0s"
+    },
+    {
+      "step": "2 regenerate skill docs (inject compliance)",
+      "status": "ok",
+      "duration": "2s"
+    },
+    {
+      "step": "3 held-out question coverage",
+      "status": "ok",
+      "duration": "-"
+    },
+    {
+      "step": "4 embedding training pairs",
+      "status": "ok",
+      "duration": "0s"
+    },
+    {
+      "step": "4 narrative-model SFT dataset",
+      "status": "ok",
+      "duration": "7s"
+    },
+    {
+      "step": "5 train embedding model",
+      "status": "skipped",
+      "duration": "-"
+    },
+    {
+      "step": "6 scenario evaluation (all cases)",
+      "status": "ok",
+      "duration": "3s"
+    }
+  ],
+  "embeddings_mode": "skip",
+  "coverage_gaps": []
+}

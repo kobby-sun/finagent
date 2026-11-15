@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-024",
+  "invoice_ref": "MC-2024",
+  "vendor_id": "V-1013",
+  "amount": "22000.00",
+  "currency": "AUD",
+  "po_ref": "PO-40024",
+  "attachments": [
+    {
+      "filename": "MC-2024.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"MC-2024\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Meridian Consulting Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40024\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"ADV-HRS\",\n      \"description\": \"Advisory hours\",\n      \"category\": \"services\",\n      \"quantity\": \"100.00\",\n      \"unit_price\": \"200.00\",\n      \"amount\": \"20000.00\"\n    }\n  ],\n  \"subtotal\": \"20000.00\",\n  \"tax\": \"2000.00\",\n  \"total\": \"22000.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"6060\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

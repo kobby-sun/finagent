@@ -1,0 +1,55 @@
+# Skill pipeline for the RECONCILE step of the agent graph.
+#
+# Re-organise, re-order, cut down or extend the workflow here - no code change needed.
+#   * stages run in order; skills inside a stage run in listed order
+#   * `when`      : condition name (see finagent/workflow.py CONDITIONS, extendable by plugins)
+#   * `requires`  : skills whose output this skill reads (must appear earlier and be enabled)
+#   * `enabled`   : false removes the skill from planning, retrieval and execution
+#   * `retrieve_when`: condition for running this skill's RAG queries (defaults to `when`)
+#
+# Safety: skills registered with mandatory=True (policy-required controls such as duplicate
+# detection or delegated-authority routing) cannot be disabled or removed. `finagent workflow
+# validate` and application start-up both refuse such a configuration.
+#
+# The resolved pipeline (with a content hash) is recorded on every run for reproducibility.
+version: "2026.11.1"
+name: accounts-payable-invoice-review
+
+plugins: []            # python modules imported at start-up to register extra parsers / skills / loaders
+                       # e.g. ["plugins.example_extensions"]
+
+stages:
+  - name: evidence
+    skills:
+      - skill: evidence_completeness
+
+  - name: integrity
+    skills:
+      - skill: duplicate_detection
+      - skill: vendor_compliance
+
+  - name: matching
+    skills:
+      - skill: three_way_match
+        when: has_po
+      - skill: non_po_validation
+        when: no_po
+      - skill: credit_note_validation
+        when: is_credit_note
+      - skill: fx_validation
+        retrieve_when: foreign_currency
+
+  - name: risk
+    skills:
+      - skill: instruction_screen
+      - skill: fraud_indicator_scoring
+        requires: [instruction_screen, vendor_compliance]
+
+  - name: routing
+    skills:
+      - skill: payment_scheduling
+        when: is_invoice
+        enabled: true
+      - skill: authority_routing
+        requires: [fx_validation, vendor_compliance]
+

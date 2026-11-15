@@ -1,0 +1,16 @@
+T4X lNV0lCE  -  0riginal
+Supplier: Coastal Packaging Co Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: CPC-7600
+Invoice Date: 2026-11-09
+PO Number: PO-40076
+Currency: AUD
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | BOX-M | Packing boxes, rnedium | goods | 200.00 | 2.40 | 480.00
+
+Subtotal: 480.00
+GST (10%): 48.00
+Total Due: AUD 528.00
+Paym ent t erms: 30 days from invoice date
+Rern it to: account ending 1234

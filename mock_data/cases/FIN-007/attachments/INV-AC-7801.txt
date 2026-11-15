@@ -1,0 +1,16 @@
+TAX INVOICE
+Supplier: Acme Industrial Supplies Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: INV-AC-7801
+Invoice Date: 2026-11-06
+PO Number: PO-40007
+Currency: AUD
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | TAPE-50 | Hazard tape | goods | 50.00 | 80.60 | 4030.00
+
+Subtotal: 4030.00
+GST (10%): 403.00
+Total Due: AUD 4433.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 4410

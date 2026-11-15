@@ -1,0 +1,24 @@
+{
+  "baseline": {
+    "curated_recall": 1.0,
+    "curated_misses": [],
+    "questions": 58,
+    "recall@1": 0.466,
+    "recall@5": 0.707,
+    "mrr@10": 0.561,
+    "non_auth_top1": 0,
+    "semantic_only": 0.0
+  },
+  "configured (hybrid, sentence_transformers, w=4.0)": {
+    "curated_recall": 1.0,
+    "curated_misses": [],
+    "questions": 58,
+    "recall@1": 0.621,
+    "recall@5": 0.897,
+    "mrr@10": 0.743,
+    "non_auth_top1": 0,
+    "semantic_only": 1.0,
+    "passes_gate": true,
+    "reasons": []
+  }
+}

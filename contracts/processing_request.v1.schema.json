@@ -1,0 +1,167 @@
+{
+  "$defs": {
+    "Attachment": {
+      "additionalProperties": false,
+      "properties": {
+        "filename": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Filename",
+          "type": "string"
+        },
+        "content_type": {
+          "default": "text/plain",
+          "maxLength": 100,
+          "title": "Content Type",
+          "type": "string"
+        },
+        "content": {
+          "description": "Text content, or base64 when encoding='base64' (PDF, images, DOCX)",
+          "maxLength": 15000000,
+          "title": "Content",
+          "type": "string"
+        },
+        "encoding": {
+          "default": "utf-8",
+          "enum": [
+            "utf-8",
+            "base64"
+          ],
+          "title": "Encoding",
+          "type": "string"
+        },
+        "source": {
+          "default": "unknown",
+          "enum": [
+            "supplier",
+            "internal",
+            "email",
+            "unknown"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "filename",
+        "content"
+      ],
+      "title": "Attachment",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "case_id": {
+      "pattern": "^[A-Z]{2,5}-\\d{3,8}$",
+      "title": "Case Id",
+      "type": "string"
+    },
+    "invoice_ref": {
+      "maxLength": 64,
+      "minLength": 1,
+      "title": "Invoice Ref",
+      "type": "string"
+    },
+    "vendor_id": {
+      "pattern": "^V-\\d{3,6}$",
+      "title": "Vendor Id",
+      "type": "string"
+    },
+    "vendor_name": {
+      "anyOf": [
+        {
+          "maxLength": 200,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Vendor Name"
+    },
+    "amount": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0.0,
+          "type": "number"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Amount"
+    },
+    "currency": {
+      "pattern": "^[A-Z]{3}$",
+      "title": "Currency",
+      "type": "string"
+    },
+    "po_ref": {
+      "anyOf": [
+        {
+          "pattern": "^PO-\\d{3,8}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Po Ref"
+    },
+    "document_type": {
+      "default": "invoice",
+      "enum": [
+        "invoice",
+        "credit_note"
+      ],
+      "title": "Document Type",
+      "type": "string"
+    },
+    "requester_id": {
+      "anyOf": [
+        {
+          "maxLength": 64,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Requester Id"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "maxLength": 5000,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "attachments": {
+      "items": {
+        "$ref": "#/$defs/Attachment"
+      },
+      "maxItems": 10,
+      "title": "Attachments",
+      "type": "array"
+    }
+  },
+  "required": [
+    "case_id",
+    "invoice_ref",
+    "vendor_id",
+    "amount",
+    "currency"
+  ],
+  "title": "ProcessingRequest",
+  "type": "object"
+}

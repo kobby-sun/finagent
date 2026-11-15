@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-029",
+  "invoice_ref": "INV-AC-7850",
+  "vendor_id": "V-1001",
+  "amount": "33000.00",
+  "currency": "AUD",
+  "po_ref": "PO-40029",
+  "attachments": [
+    {
+      "filename": "INV-AC-7850.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"INV-AC-7850\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Acme Industrial Supplies Pty Ltd\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"AUD\",\n  \"po_ref\": \"PO-40029\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"DESK-30\",\n      \"description\": \"Standing desks\",\n      \"category\": \"goods\",\n      \"quantity\": \"30.00\",\n      \"unit_price\": \"1000.00\",\n      \"amount\": \"30000.00\"\n    }\n  ],\n  \"subtotal\": \"30000.00\",\n  \"tax\": \"3000.00\",\n  \"total\": \"33000.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"4410\",\n    \"bank_country\": \"AU\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

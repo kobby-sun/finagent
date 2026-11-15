@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-045",
+  "invoice_ref": "NO-1045",
+  "vendor_id": "V-1022",
+  "amount": "4000.00",
+  "currency": "EUR",
+  "po_ref": "PO-40045",
+  "attachments": [
+    {
+      "filename": "NO-1045.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"NO-1045\",\n  \"invoice_date\": \"2026-10-20\",\n  \"vendor_name\": \"Nordic Optics AB\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"EUR\",\n  \"po_ref\": \"PO-40045\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"LENS\",\n      \"description\": \"Optical lenses\",\n      \"category\": \"goods\",\n      \"quantity\": \"10.00\",\n      \"unit_price\": \"400.00\",\n      \"amount\": \"4000.00\"\n    }\n  ],\n  \"subtotal\": \"4000.00\",\n  \"tax\": \"0.00\",\n  \"total\": \"4000.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"2222\",\n    \"bank_country\": \"SE\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

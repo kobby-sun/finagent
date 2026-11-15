@@ -1,0 +1,16 @@
+.venv
+data
+.git
+**/__pycache__
+.pytest_cache
+test_history
+training/data
+training/embeddings/archive
+training/embeddings/checkpoints
+training/adapters
+training/fused
+infra
+docs
+*.zip
+Agentic_AI_Engineer_Take_Home_Test.pdf
+.env

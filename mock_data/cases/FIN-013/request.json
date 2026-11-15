@@ -1,0 +1,17 @@
+{
+  "case_id": "FIN-013",
+  "invoice_ref": "II-77001",
+  "vendor_id": "V-1009",
+  "amount": "10000.00",
+  "currency": "USD",
+  "po_ref": "PO-40013",
+  "attachments": [
+    {
+      "filename": "II-77001.json",
+      "content_type": "application/json",
+      "content": "{\n  \"document_type\": \"invoice\",\n  \"invoice_number\": \"II-77001\",\n  \"invoice_date\": \"2026-11-06\",\n  \"vendor_name\": \"Ionic Instruments Inc\",\n  \"bill_to\": \"Northstar Group Pty Ltd\",\n  \"currency\": \"USD\",\n  \"po_ref\": \"PO-40013\",\n  \"lines\": [\n    {\n      \"line_no\": 1,\n      \"sku\": \"SENS-10\",\n      \"description\": \"Precision sensors\",\n      \"category\": \"goods\",\n      \"quantity\": \"10.00\",\n      \"unit_price\": \"1000.00\",\n      \"amount\": \"10000.00\"\n    }\n  ],\n  \"subtotal\": \"10000.00\",\n  \"tax\": \"0.00\",\n  \"total\": \"10000.00\",\n  \"payment_terms_days\": 30,\n  \"remit_to\": {\n    \"account_last4\": \"8150\",\n    \"bank_country\": \"US\"\n  }\n}",
+      "source": "supplier"
+    }
+  ],
+  "requester_id": "u-req-11"
+}

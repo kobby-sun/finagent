@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "UT-4600",
+  "invoice_date": "2026-11-05",
+  "vendor_name": "Umber Tools Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40046",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "DRILL",
+      "description": "Drills",
+      "category": "goods",
+      "quantity": "5.00",
+      "unit_price": "300.00",
+      "amount": "1500.00"
+    }
+  ],
+  "subtotal": "1500.00",
+  "tax": "150.00",
+  "total": "1650.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "2121",
+    "bank_country": "AU"
+  }
+}

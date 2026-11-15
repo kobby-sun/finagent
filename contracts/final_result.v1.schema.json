@@ -1,0 +1,673 @@
+{
+  "$defs": {
+    "ActionTaken": {
+      "additionalProperties": false,
+      "properties": {
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "tool": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Tool"
+        },
+        "at": {
+          "title": "At",
+          "type": "string"
+        },
+        "detail": {
+          "additionalProperties": true,
+          "title": "Detail",
+          "type": "object"
+        }
+      },
+      "required": [
+        "action",
+        "at"
+      ],
+      "title": "ActionTaken",
+      "type": "object"
+    },
+    "ApprovalSlot": {
+      "additionalProperties": false,
+      "properties": {
+        "slot": {
+          "title": "Slot",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "min_limit_aud": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Min Limit Aud"
+        },
+        "requires_flag": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Requires Flag"
+        }
+      },
+      "required": [
+        "slot",
+        "description"
+      ],
+      "title": "ApprovalSlot",
+      "type": "object"
+    },
+    "Calculation": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "formula": {
+          "title": "Formula",
+          "type": "string"
+        },
+        "inputs": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Inputs",
+          "type": "object"
+        },
+        "result": {
+          "title": "Result",
+          "type": "string"
+        },
+        "rounding": {
+          "default": "ROUND_HALF_UP to 0.01",
+          "title": "Rounding",
+          "type": "string"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold"
+        },
+        "passed": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Passed"
+        }
+      },
+      "required": [
+        "name",
+        "formula",
+        "inputs",
+        "result"
+      ],
+      "title": "Calculation",
+      "type": "object"
+    },
+    "Citation": {
+      "additionalProperties": false,
+      "properties": {
+        "source_id": {
+          "title": "Source Id",
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "policy",
+            "vendor_master",
+            "purchase_order",
+            "goods_receipt",
+            "invoice_history",
+            "fx_rate",
+            "authority_register",
+            "case_document",
+            "request"
+          ],
+          "title": "Source Type",
+          "type": "string"
+        },
+        "document_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Id"
+        },
+        "version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Version"
+        },
+        "section": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Section"
+        },
+        "trust": {
+          "$ref": "#/$defs/TrustLevel",
+          "default": "authoritative"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quote"
+        }
+      },
+      "required": [
+        "source_id",
+        "source_type"
+      ],
+      "title": "Citation",
+      "type": "object"
+    },
+    "ExceptionCategory": {
+      "enum": [
+        "MISSING_PO",
+        "MISSING_RECEIPT",
+        "PRICE_VARIANCE",
+        "QUANTITY_VARIANCE",
+        "DUPLICATE_RISK",
+        "VENDOR_BLOCK",
+        "BANK_CHANGE",
+        "AUTHORITY_GAP",
+        "TAX_QUERY",
+        "OTHER_CONTROL_RISK"
+      ],
+      "title": "ExceptionCategory",
+      "type": "string"
+    },
+    "ExceptionRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "$ref": "#/$defs/ExceptionCategory"
+        },
+        "failed_rule": {
+          "title": "Failed Rule",
+          "type": "string"
+        },
+        "expected": {
+          "title": "Expected",
+          "type": "string"
+        },
+        "observed": {
+          "title": "Observed",
+          "type": "string"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        },
+        "owner": {
+          "title": "Owner",
+          "type": "string"
+        },
+        "next_review_date": {
+          "title": "Next Review Date",
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "failed_rule",
+        "expected",
+        "observed",
+        "owner",
+        "next_review_date"
+      ],
+      "title": "ExceptionRecord",
+      "type": "object"
+    },
+    "FindingStatus": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "UNKNOWN",
+        "NOT_APPLICABLE"
+      ],
+      "title": "FindingStatus",
+      "type": "string"
+    },
+    "Inference": {
+      "additionalProperties": false,
+      "properties": {
+        "statement": {
+          "title": "Statement",
+          "type": "string"
+        },
+        "basis": {
+          "title": "Basis",
+          "type": "string"
+        },
+        "produced_by": {
+          "enum": [
+            "rules",
+            "model"
+          ],
+          "title": "Produced By",
+          "type": "string"
+        }
+      },
+      "required": [
+        "statement",
+        "basis",
+        "produced_by"
+      ],
+      "title": "Inference",
+      "type": "object"
+    },
+    "Outcome": {
+      "enum": [
+        "APPROVE_FOR_POSTING",
+        "HOLD_FOR_INFORMATION",
+        "REJECT_DUPLICATE",
+        "REJECT_INVALID",
+        "ESCALATE_CONTROL_REVIEW"
+      ],
+      "title": "Outcome",
+      "type": "string"
+    },
+    "PolicyFinding": {
+      "additionalProperties": false,
+      "properties": {
+        "control": {
+          "title": "Control",
+          "type": "string"
+        },
+        "rule": {
+          "title": "Rule",
+          "type": "string"
+        },
+        "status": {
+          "$ref": "#/$defs/FindingStatus"
+        },
+        "detail": {
+          "title": "Detail",
+          "type": "string"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "control",
+        "rule",
+        "status",
+        "detail"
+      ],
+      "title": "PolicyFinding",
+      "type": "object"
+    },
+    "Recommendation": {
+      "additionalProperties": false,
+      "properties": {
+        "outcome": {
+          "$ref": "#/$defs/Outcome"
+        },
+        "primary_exception": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ExceptionCategory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "next_action": {
+          "title": "Next Action",
+          "type": "string"
+        },
+        "summary": {
+          "title": "Summary",
+          "type": "string"
+        },
+        "required_approvals": {
+          "items": {
+            "$ref": "#/$defs/ApprovalSlot"
+          },
+          "title": "Required Approvals",
+          "type": "array"
+        },
+        "amount_aud": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Amount Aud"
+        },
+        "proposed_payment_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Proposed Payment Date"
+        }
+      },
+      "required": [
+        "outcome",
+        "confidence",
+        "next_action",
+        "summary"
+      ],
+      "title": "Recommendation",
+      "type": "object"
+    },
+    "RiskIndicator": {
+      "additionalProperties": false,
+      "properties": {
+        "indicator": {
+          "title": "Indicator",
+          "type": "string"
+        },
+        "evidence": {
+          "title": "Evidence",
+          "type": "string"
+        },
+        "source": {
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "indicator",
+        "evidence",
+        "source"
+      ],
+      "title": "RiskIndicator",
+      "type": "object"
+    },
+    "RunStatus": {
+      "enum": [
+        "CREATED",
+        "RUNNING",
+        "AWAITING_APPROVAL",
+        "COMPLETED",
+        "NEEDS_INFORMATION",
+        "FAILED"
+      ],
+      "title": "RunStatus",
+      "type": "string"
+    },
+    "SourcedFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact": {
+          "title": "Fact",
+          "type": "string"
+        },
+        "citations": {
+          "items": {
+            "$ref": "#/$defs/Citation"
+          },
+          "title": "Citations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "fact",
+        "citations"
+      ],
+      "title": "SourcedFact",
+      "type": "object"
+    },
+    "TrustLevel": {
+      "enum": [
+        "authoritative",
+        "superseded",
+        "untrusted"
+      ],
+      "title": "TrustLevel",
+      "type": "string"
+    },
+    "Unknown": {
+      "additionalProperties": false,
+      "properties": {
+        "item": {
+          "title": "Item",
+          "type": "string"
+        },
+        "impact": {
+          "title": "Impact",
+          "type": "string"
+        },
+        "resolution": {
+          "title": "Resolution",
+          "type": "string"
+        }
+      },
+      "required": [
+        "item",
+        "impact",
+        "resolution"
+      ],
+      "title": "Unknown",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "case_id": {
+      "title": "Case Id",
+      "type": "string"
+    },
+    "status": {
+      "$ref": "#/$defs/RunStatus"
+    },
+    "recommendation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Recommendation"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "sourced_facts": {
+      "items": {
+        "$ref": "#/$defs/SourcedFact"
+      },
+      "title": "Sourced Facts",
+      "type": "array"
+    },
+    "calculations": {
+      "items": {
+        "$ref": "#/$defs/Calculation"
+      },
+      "title": "Calculations",
+      "type": "array"
+    },
+    "inferences": {
+      "items": {
+        "$ref": "#/$defs/Inference"
+      },
+      "title": "Inferences",
+      "type": "array"
+    },
+    "unknowns": {
+      "items": {
+        "$ref": "#/$defs/Unknown"
+      },
+      "title": "Unknowns",
+      "type": "array"
+    },
+    "policy_findings": {
+      "items": {
+        "$ref": "#/$defs/PolicyFinding"
+      },
+      "title": "Policy Findings",
+      "type": "array"
+    },
+    "exceptions": {
+      "items": {
+        "$ref": "#/$defs/ExceptionRecord"
+      },
+      "title": "Exceptions",
+      "type": "array"
+    },
+    "risk_indicators": {
+      "items": {
+        "$ref": "#/$defs/RiskIndicator"
+      },
+      "title": "Risk Indicators",
+      "type": "array"
+    },
+    "actions_taken": {
+      "items": {
+        "$ref": "#/$defs/ActionTaken"
+      },
+      "title": "Actions Taken",
+      "type": "array"
+    },
+    "approval": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Approval"
+    },
+    "submission": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Submission"
+    },
+    "reasoning": {
+      "description": "Why each key step went the way it did: actor (system/skill/model/human), decision, reason, refs",
+      "items": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Reasoning",
+      "type": "array"
+    },
+    "model": {
+      "additionalProperties": true,
+      "title": "Model",
+      "type": "object"
+    },
+    "retrieval": {
+      "additionalProperties": true,
+      "title": "Retrieval",
+      "type": "object"
+    },
+    "policy": {
+      "additionalProperties": true,
+      "description": "Policy baseline used: who reviewed it and when; sections that differ from it (case held)",
+      "title": "Policy",
+      "type": "object"
+    }
+  },
+  "required": [
+    "run_id",
+    "case_id",
+    "status"
+  ],
+  "title": "FinalResult",
+  "type": "object"
+}

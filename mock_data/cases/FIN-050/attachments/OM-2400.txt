@@ -1,0 +1,19 @@
+TAX INVOICE
+Supplier: Orbit Maintenance Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: OM-2400
+Invoice Date: 2026-11-10
+PO Number: (none)
+Currency: AUD
+Non-PO Category: emergency
+Justification: Gas leak at Site 2 required immediate isolation and repair
+Emergency Type: safety
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | GAS-REP | Emergency gas leak isolation and repair | services | 1.00 | 12000.00 | 12000.00
+
+Subtotal: 12000.00
+GST (10%): 1200.00
+Total Due: AUD 13200.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 5115

@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "INV-AC-7880",
+  "invoice_date": "2026-11-06",
+  "vendor_name": "Acme Industrial Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40040",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "FAN-2",
+      "description": "Industrial fans",
+      "category": "goods",
+      "quantity": "2.00",
+      "unit_price": "500.00",
+      "amount": "1000.00"
+    }
+  ],
+  "subtotal": "1000.00",
+  "tax": "100.00",
+  "total": "1100.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "4410",
+    "bank_country": "AU"
+  }
+}

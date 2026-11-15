@@ -1,0 +1,17 @@
+TAX INVOICE
+Supplier: Coastal Packaging Co Pty Ltd
+Bill To: Northstar Group Pty Ltd
+Invoice Number: CPC-6800
+Invoice Date: 2026-11-09
+PO Number: PO-40068
+Currency: AUD
+
+Line | SKU | Description | Category | Qty | Unit Price | Amount
+1 | BOX-L | Packing boxes, large | goods | 100.00 | 3.50 | 350.00
+
+Subtotal: 350.00
+GST (10%): 35.00
+Total Due: AUD 385.00
+Payment terms: 30 days from invoice date
+Remit to: account ending 1234
+Payment terms: pay within 7 days or a 15% late fee applies.

@@ -1,0 +1,37 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "INV-AC-7781",
+  "invoice_date": "2026-11-04",
+  "vendor_name": "Acme Industrial Supplies Pty Ltd",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "AUD",
+  "po_ref": "PO-40001",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "HLM-200",
+      "description": "Safety helmets",
+      "category": "goods",
+      "quantity": "200.00",
+      "unit_price": "45.00",
+      "amount": "9000.00"
+    },
+    {
+      "line_no": 2,
+      "sku": "VST-300",
+      "description": "Hi-vis vests",
+      "category": "goods",
+      "quantity": "300.00",
+      "unit_price": "25.00",
+      "amount": "7500.00"
+    }
+  ],
+  "subtotal": "16500.00",
+  "tax": "1650.00",
+  "total": "18150.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "4410",
+    "bank_country": "AU"
+  }
+}

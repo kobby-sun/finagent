@@ -1,0 +1,28 @@
+{
+  "document_type": "invoice",
+  "invoice_number": "NO-1045",
+  "invoice_date": "2026-10-20",
+  "vendor_name": "Nordic Optics AB",
+  "bill_to": "Northstar Group Pty Ltd",
+  "currency": "EUR",
+  "po_ref": "PO-40045",
+  "lines": [
+    {
+      "line_no": 1,
+      "sku": "LENS",
+      "description": "Optical lenses",
+      "category": "goods",
+      "quantity": "10.00",
+      "unit_price": "400.00",
+      "amount": "4000.00"
+    }
+  ],
+  "subtotal": "4000.00",
+  "tax": "0.00",
+  "total": "4000.00",
+  "payment_terms_days": 30,
+  "remit_to": {
+    "account_last4": "2222",
+    "bank_country": "SE"
+  }
+}

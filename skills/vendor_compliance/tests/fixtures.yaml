@@ -1,0 +1,129 @@
+# Fixtures for skill 'vendor_compliance'. Run: finagent skills test vendor_compliance
+skill: vendor_compliance
+fixtures:
+- id: vc-active
+  case: FIN-001
+  description: Active vendor, matching bank details
+  expect:
+    votes: []
+    exceptions: []
+    findings:
+      vendor_status: PASS
+      bank_details_match: PASS
+    data:
+      high_risk_reasons: []
+- id: vc-blocked
+  case: FIN-010
+  description: BLOCKED vendor
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - VENDOR_BLOCK
+    findings:
+      vendor_status: FAIL
+- id: vc-sanctions-review
+  case: FIN-025
+  description: SANCTIONS_REVIEW vendor
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - VENDOR_BLOCK
+- id: vc-dormant
+  case: FIN-036
+  description: DORMANT vendor
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - VENDOR_BLOCK
+- id: vc-pending-verification
+  case: FIN-037
+  description: PENDING_VERIFICATION vendor (also new)
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - VENDOR_BLOCK
+- id: vc-bank-change-hold
+  case: FIN-011
+  description: Bank changed 1 business day ago
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - BANK_CHANGE
+    calculations:
+      business_days_since_bank_change: false
+- id: vc-bank-mismatch
+  case: FIN-003
+  description: Invoice/e-mail quote ****8842 vs master ****1234
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - BANK_CHANGE
+    findings:
+      bank_details_match: FAIL
+    risk_indicators_min: 1
+- id: vc-new-vendor
+  case: FIN-012
+  description: Vendor 13 days old is higher-risk
+  expect:
+    votes: []
+    data:
+      high_risk_reasons:
+      - new vendor (13 days old)
+- id: vc-first-payment-after-change
+  case: FIN-034
+  description: First payment after verified change is higher-risk
+  expect:
+    votes: []
+    exceptions: []
+    data:
+      high_risk_reasons:
+      - first payment after verified bank change
+- id: vc-overseas
+  case: FIN-013
+  description: Overseas account, screening fresh
+  expect:
+    votes: []
+    findings:
+      sanctions_screening: PASS
+    data:
+      high_risk_reasons:
+      - overseas bank account (US)
+- id: vc-overseas-stale-screening
+  case: FIN-013
+  description: Screening older than 24h
+  patch:
+    evidence.vendor.sanctions_screened_at: '2026-11-10T00:00:00+11:00'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - VENDOR_BLOCK
+    findings:
+      sanctions_screening: FAIL
+- id: vc-sod-creator
+  case: FIN-024
+  description: Vendor creator excluded from approving
+  expect:
+    votes: []
+    data:
+      excluded_approvers:
+        u-dd-02: created the vendor record (FIN-POL-003 s1)
+- id: vc-master-down
+  case: FIN-001
+  description: Vendor master unavailable => hold
+  patch:
+    evidence.vendor: null
+    evidence.errors.vendor: 'ToolTimeout: simulated'
+  expect:
+    votes:
+    - HOLD_FOR_INFORMATION
+    exceptions:
+    - VENDOR_BLOCK
+    findings:
+      vendor: UNKNOWN

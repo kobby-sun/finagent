@@ -1,0 +1,123 @@
+{
+  "version": "4.0.3",
+  "policy_document": "FIN-POL-003",
+  "role_limits": {
+    "Cost Centre Manager": "10000",
+    "Department Director": "50000",
+    "Executive Director": "250000",
+    "Chief Financial Officer": "1000000",
+    "Chief Executive Officer": null
+  },
+  "approvers": [
+    {
+      "user_id": "u-ccm-01",
+      "role": "Cost Centre Manager",
+      "limit_aud": "10000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-ccm-02",
+      "role": "Cost Centre Manager",
+      "limit_aud": "10000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-dd-01",
+      "role": "Department Director",
+      "limit_aud": "50000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-dd-02",
+      "role": "Department Director",
+      "limit_aud": "50000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-dd-03",
+      "role": "Department Director",
+      "limit_aud": "50000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-ed-01",
+      "role": "Executive Director",
+      "limit_aud": "250000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-cfo-01",
+      "role": "Chief Financial Officer",
+      "limit_aud": "1000000",
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-ceo-01",
+      "role": "Chief Executive Officer",
+      "limit_aud": null,
+      "flags": [],
+      "active": true
+    },
+    {
+      "user_id": "u-fc-01",
+      "role": "Financial Controller",
+      "limit_aud": "50000",
+      "flags": [
+        "financial_control"
+      ],
+      "active": true
+    },
+    {
+      "user_id": "u-fc-02",
+      "role": "Financial Control Analyst",
+      "limit_aud": "0",
+      "flags": [
+        "financial_control"
+      ],
+      "active": true
+    },
+    {
+      "user_id": "u-pg-01",
+      "role": "Procurement Governance Lead",
+      "limit_aud": "0",
+      "flags": [
+        "procurement_governance"
+      ],
+      "active": true
+    },
+    {
+      "user_id": "u-tr-01",
+      "role": "Treasury Manager",
+      "limit_aud": "0",
+      "flags": [
+        "treasury"
+      ],
+      "active": true
+    },
+    {
+      "user_id": "u-ap-01",
+      "role": "AP Officer",
+      "limit_aud": "0",
+      "flags": [],
+      "active": true
+    }
+  ],
+  "delegations": [
+    {
+      "delegate": "u-ccm-02",
+      "delegator": "u-dd-01",
+      "scope": "Department Director",
+      "limit_aud": "50000",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-31",
+      "register_ref": "DEL-2026-114"
+    }
+  ]
+}
